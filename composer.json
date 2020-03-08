@@ -9,6 +9,7 @@
         "kitetail/zttp": "^0.6.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^1.0",
+        "m1guelpf/netlify-mix": "^0.2.0",
         "spatie/laravel-blink": "^1.4",
         "statamic/cms": "3.0.*@beta"
     },

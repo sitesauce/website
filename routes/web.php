@@ -1,5 +1,7 @@
 <?php
 
+use M1guelpf\NetlifyMix\Http\Middleware\VerifyNetlifyRequest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
