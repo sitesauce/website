@@ -1,0 +1,20 @@
+<rss version="2.0">
+	<channel>
+		<title>Sitesauce</title>
+		<link>{{ "https://sitesauce.app" | cdata }}</link>
+		<description>Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.</description>
+		<lastBuildDate>{{ collection:posts limit="1" }}{{ date format="r" }}{{ /collection:posts }}</lastBuildDate>
+		<language>en-us</language>
+		<copyright>Copyright {{ current_date format='Y' }}</copyright>
+		<ttl>3600</ttl>
+		{{ collection:posts }}
+		<item>
+			<title>{{ title | cdata }}</title>
+			<link>{{ permalink }}</link>
+			<guid>{{ permalink }}</guid>
+			<pubDate>{{ date format="r" }}</pubDate>
+			<description>{{ content | render_bard | full_urls | cdata }}</description>
+		</item>
+		{{ /collection:posts }}
+	</channel>
+</rss>

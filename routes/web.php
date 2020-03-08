@@ -13,6 +13,4 @@ use M1guelpf\NetlifyMix\Http\Middleware\VerifyNetlifyRequest;
 |
 */
 
-// Route::statamic('example', 'example-view', [
-//    'title' => 'Example'
-// ]);
+Route::statamic('blog/feed', 'feed', ['layout' => '', 'content_type' => 'xml']);

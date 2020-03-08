@@ -5,9 +5,7 @@
 			<p class="mt-4 mb-12 text-brand-700 font-ttnorms text-lg">Posted on {{ date }}</p>
 		{{ /if }}
 		<div class="content text-brand-900 mt-6 text-lg antialiased leading-loose">
-			{{ content }}
-				{{ partial src="sets/{type}" }}
-			{{ /content }}
+			{{ content | renderBard }}
 		</div>
 	</div>
 </div>
