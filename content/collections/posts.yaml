@@ -1,0 +1,10 @@
+title: Posts
+blueprints:
+  - page
+revisions: false
+date: true
+default_status: draft
+date_behavior:
+  past: public
+  future: private
+route: /blog/{slug}

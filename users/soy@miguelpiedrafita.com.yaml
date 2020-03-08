@@ -1,0 +1,13 @@
+name: 'Miguel Piedrafita'
+super: true
+id: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
+password_hash: $2y$10$EgaakwhUsmIq8YofOQBx4.CV2U1Cn1DT74ln3ONBdRlsWQn/yZwxe
+preferences:
+  start_page: collections/pages
+  favorites:
+    -
+      name: Pages
+      url: collections/pages
+    -
+      name: Posts
+      url: collections/posts

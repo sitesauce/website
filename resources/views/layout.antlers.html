@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{ site_short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ site_name }}</title>
+		<meta name="description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide." />
+		
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Sitesauce - A static site for your dynamically-generated website">
+		<meta property="og:description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.">
+		<meta property="og:image" content="https://brand-assets.sitesauce.app/twitter-card.png">
+
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:title" content="Sitesauce - A static site for your dynamically-generated website">
+		<meta property="twitter:description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.">
+		<meta property="twitter:image" content="https://brand-assets.sitesauce.app/twitter-card.png">
+
+		<link href="{{ mix src='/css/app.css' }}" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="https://brand-assets.sitesauce.app/icon.png" type="image/png" />
+		<link rel="shortcut icon" href="https://brand-assets.sitesauce.app/icon.png" type="image/png" />
+    </head>
+    <body class="page-{{ template }}">
+		{{ partial:header }}
+
+		{{ template_content }}
+
+		<footer>
+			<div class="footer-cta pt-10 relative z-0 bg-brand-300 pl-2 pr-4 md:px-0">
+				<a href="https://app.sitesauce.app/register" class="xl:max-w-5xl mx-auto py-6 md:py-12 px-4 md:px-8 flex items-center justify-between rounded-lg shadow-cta border-2 border-brand-400 transition duration-300 ease-in-out bg-brand-400 transform hover:translate-x-cta-hover hover:translate-y-cta-hover hover:shadow-none max-w-screen-sm lg:max-w-screen-md mx-auto">
+					<h2 class="flex-1 text-2xl md:text-3xl leading-9 font-extrabold tracking-tight sm:leading-10 lg:mr-8 font-brown">
+						<span class="text-brand-200 text-shadow">Let's get your first static site up and running.</span>
+						<span class="text-brand-50">It takes less than a minute to get started. <span class="text-brand-200 text-shadow md:hidden">Click here.</span></span>
+					</h2>
+					<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hidden md:block w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+				</a>
+			</div>
+			<div class="py-0 pb-4 bg-brand-300 -mt-px">
+				<div class="container text-center pt-12">
+					<p class="my-4 text-lg text-white font-spoof"><span class="font-ttnorms">&copy;</span> {{ now format="Y" }} Sitesauce. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		</div>
+		<script src="{{ mix src='/js/app.js' }}"></script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+.content {
+	@apply font-ttnorms;
+
+	h3 {
+		@apply mt-12 text-2xl font-bold leading-tight;
+	}
+
+	p {
+		@apply my-4;
+	}
+
+	a {
+		@apply rounded text-brand-500 underline font-medium;
+
+		&:hover {
+			@apply text-brand-700;
+		}
+	}
+
+	summary {
+		@apply pl-3 -ml-3 rounded-lg cursor-pointer;
+
+		&:focus {
+			@apply outline-none shadow-outline-teal;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@screen md {
+	.footer-cta::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 250px;
+		background: theme('colors.brand.50');
+		transform: skewY(-6deg);
+		z-index: -1;
+		top: -127px;
+	}
+
+	.page-home .footer-cta::before {
+		background: white;
+	}
+}
