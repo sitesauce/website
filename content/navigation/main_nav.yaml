@@ -1,0 +1,14 @@
+title: 'Main Nav'
+tree:
+  -
+    title: Features
+    url: '/#features'
+  -
+    title: 'How it Works'
+    url: '/#how-it-works'
+  -
+    title: Pricing
+    url: '/#pricing'
+  -
+    title: Docs
+    url: /docs
