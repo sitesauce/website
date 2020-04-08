@@ -1,10 +1,10 @@
 <div class="bg-brand-50 overflow-hidden pt-16 z-1 relative">
-	<div class="max-w-5xl mx-auto py-8 sm:py-16 px-6">
+	<div class="max-w-5xl mx-auto py-8 sm:py-16 px-4 md:px-10 lg:px-0">
 		<h1 class="text-4xl sm:text-5xl text-medium-purple font-spoof text-brand-900 leading-normal">{{ title }}</h1>
 		{{ if !hide_date }}
-			<p class="mt-4 mb-12 text-brand-700 font-ttnorms text-lg">Posted on {{ date }}</p>
+			<p class="mt-4 text-brand-400 font-ttnorms text-lg">Posted on {{ date }} &bull; {{ reading_time :content="content" }} min read</p>
 		{{ /if }}
-		<div class="content text-brand-900 mt-6 text-lg antialiased leading-loose">
+		<div class="content text-brand-900 mt-5 text-lg antialiased leading-loose">
 			{{ content | renderBard }}
 		</div>
 	</div>
