@@ -1,10 +1,12 @@
 title: Posts
+layout: layout
 blueprints:
   - page
 revisions: false
+route: '/blog/{slug}'
 date: true
+sort_dir: desc
 default_status: draft
 date_behavior:
   past: public
-  future: private
-route: /blog/{slug}
+  future: unlisted

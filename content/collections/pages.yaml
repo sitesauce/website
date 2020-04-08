@@ -1,5 +1,9 @@
 title: Pages
-structure: pages
 blueprints:
   - page
 route: '{parent_uri}/{slug}'
+structure:
+  root: true
+  tree:
+    -
+      entry: home
