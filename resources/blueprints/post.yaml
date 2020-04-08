@@ -1,0 +1,149 @@
+title: Post
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: content
+        field:
+          buttons:
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - underline
+            - strikethrough
+            - code
+            - codeblock
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Content
+          sets:
+            html:
+              display: HTML
+              fields:
+                -
+                  handle: code
+                  field:
+                    theme: material
+                    mode: htmlmixed
+                    indent_type: tabs
+                    indent_size: 4
+                    line_numbers: true
+                    line_wrapping: true
+                    key_map: default
+                    type: code
+                    localizable: false
+                    listable: hidden
+                    display: Code
+            single_image:
+              display: 'Single Image'
+              fields:
+                -
+                  handle: image
+                  field:
+                    mode: grid
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    type: assets
+                    localizable: false
+                    listable: hidden
+                    display: Image
+                -
+                  handle: alt
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: false
+                    listable: hidden
+                    display: 'Alt Text'
+                -
+                  handle: caption
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: false
+                    listable: hidden
+                    display: Caption
+            details:
+              display: Details
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: false
+                    listable: hidden
+                    display: Title
+                -
+                  handle: content
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    type: bard
+                    localizable: false
+                    listable: hidden
+                    display: Content
+            last_updated:
+              display: 'Last Updated'
+              fields: {  }
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: description
+        field:
+          type: textarea
+          localizable: false
+          listable: hidden
+          display: Description
+  configuration:
+    display: Configuration
+    fields:
+      -
+        handle: hide_date
+        field:
+          type: toggle
+          localizable: false
+          listable: hidden
+          display: 'Hide published date'
