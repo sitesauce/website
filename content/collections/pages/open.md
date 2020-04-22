@@ -1,7 +1,7 @@
 ---
 title: Open
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
-updated_at: 1583627413
+updated_at: 1587550684
 hide_date: true
 id: e418a3f9-53bc-4060-a40e-7203c363d567
 content:
@@ -87,16 +87,16 @@ content:
     content:
       -
         type: text
-        text: '~'
-      -
-        type: text
         marks:
           -
             type: bold
-        text: $44.5
+        text: '~${{open:costs}}'
       -
         type: text
-        text: "\_(ARC $534)"
+        text: "\_(ARC "
+      -
+        type: text
+        text: '${{open:acosts}})'
   -
     type: set
     attrs:
@@ -128,14 +128,77 @@ content:
     attrs:
       values:
         type: details
-        title: 'Hosting ~$43'
+        title: 'Laravel Vapor $39'
         content:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Sitesauce is hosted on a Google Cloud Platform VPS located on Frankfurt, Germany.'
+                text: 'Sitesauce uses '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://vapor.laravel.com'
+                      target: _blank
+                      rel: null
+                text: 'Laravel Vapor'
+              -
+                type: text
+                text: ' to run its code on AWS Lambda.'
+  -
+    type: set
+    attrs:
+      values:
+        type: details
+        title: 'AWS ~${{ open:vaporCost }}'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'All our infrastructure, from servers to email, runs on Amazon Web Services. The above cost is an estimate calculated by Laravel Vapor for the last 30 days.'
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: Profit
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: '~${{ open:profit }}'
+      -
+        type: text
+        text: ' per month (${{ open:aprofit }} per year)'
+  -
+    type: paragraph
+  -
+    type: set
+    attrs:
+      values:
+        type: details
+        title: 'How is profit calculated?'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'The estimate shown here is calculated by subtracting the costs from the revenue. '
+  -
+    type: paragraph
   -
     type: heading
     attrs:
@@ -163,7 +226,7 @@ content:
     content:
       -
         type: text
-        text: "In the last month, we had {{ open:pageviews }} pageviews. You can see additional information on\_"
+        text: "In the last month, we've had {{ open:pageviews }} pageviews. You can see additional information on\_"
       -
         type: text
         marks:

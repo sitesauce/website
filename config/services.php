@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    
+    'vapor' => [
+        'token' => env('VAPOR_TOKEN')
+    ]
 
 ];
