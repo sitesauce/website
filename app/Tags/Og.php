@@ -12,6 +12,6 @@ class Og extends Tags
      */
     public function image() : string
     {
-        return sprintf('https://og-images.sitesauce.app/**%s**.png?md=1', rawurlencode($this->params->get('title')));
+        return sprintf('https://images.sitesauce.app/**%s**.png?md=1', rawurlencode($this->params->get('title')));
     }
 }
