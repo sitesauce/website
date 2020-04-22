@@ -15,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        //'App\Model' => 'App\Policies\ModelPolicy',
     ];
 
     /**
@@ -27,8 +27,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-		app(ProtectorManager::class)->extend('sitesauce', function ($app) {
-			return new SitesauceDriver;
-		});
+        app(ProtectorManager::class)->extend('sitesauce', function ($app) {
+            return new SitesauceDriver;
+        });
     }
 }
