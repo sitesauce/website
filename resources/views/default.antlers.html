@@ -1,3 +1,15 @@
+{{ section:meta_tags }}
+	<meta name="description" content="{{ description }}" />
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="{{ title }} - Sitesauce">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:image" content="{{ if image }}{{ image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="{{ title }} - Sitesauce">
+	<meta property="twitter:description" content="{{ description }}">
+	<meta property="twitter:image" content="{{ if image }}{{ image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
+{{ /section:meta_tags }}
+
 <div class="bg-brand-50 overflow-hidden pt-16 z-1 relative">
 	<div class="max-w-5xl mx-auto py-8 sm:py-16 px-4 md:px-10 lg:px-0">
 		<h1 class="text-4xl sm:text-5xl text-medium-purple font-spoof text-brand-900 leading-normal">{{ title }}</h1>

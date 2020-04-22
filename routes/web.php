@@ -14,4 +14,4 @@ use M1guelpf\NetlifyMix\Http\Middleware\VerifyNetlifyRequest;
 */
 
 Route::statamic('blog/feed', 'feed', ['layout' => '', 'content_type' => 'xml']);
-Route::statamic('blog/', 'posts.index');
+Route::statamic('blog/', 'posts.index', ['title' => 'Blog']);
