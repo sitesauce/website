@@ -1,4 +1,5 @@
-# admin:
-#   title: Administrator
-#   permissions:
-#     - super
+guide_author:
+  title: 'Guide Author'
+  permissions:
+    - 'access cp'
+    - 'view guides entries'

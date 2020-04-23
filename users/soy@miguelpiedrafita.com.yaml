@@ -11,3 +11,6 @@ preferences:
     -
       name: Posts
       url: collections/posts
+    -
+      name: Guides
+      url: collections/guides

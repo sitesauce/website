@@ -5,7 +5,7 @@
 		@apply mt-12 text-2xl font-bold leading-tight;
 	}
 
-	p {
+	p:not(.not-content) {
 		@apply my-4 text-justify;
 	}
 

@@ -1,0 +1,52 @@
+{{ section:meta_tags }}
+	<meta name="description" content="An expanding collection of Sitesauce knowledge, from basics to mastery." />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Sitesauce Guides - An expanding collection of Sitesauce knowledge, from basics to mastery.">
+	<meta property="og:description" content="An expanding collection of Sitesauce knowledge, from basics to mastery.">
+	<meta property="og:image" content="https://brand-assets.sitesauce.app/guides-card.png">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="Sitesauce Guides - An expanding collection of Sitesauce knowledge, from basics to mastery.">
+	<meta property="twitter:description" content="An expanding collection of Sitesauce knowledge, from basics to mastery.">
+	<meta property="twitter:image" content="https://brand-assets.sitesauce.app/guides-card.png">
+{{ /section:meta_tags }}
+
+<div class="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-1">
+	<div class="relative max-w-7xl mx-auto">
+		<div class="text-center">
+			<span class="uppercase text-brand-900 font-brown">Mastering Sitesauce</span>
+			<h2 class="mt-1 text-3xl leading-9 tracking-tight font-extrabold text-brand-900 sm:text-4xl sm:leading-10 font-spoof">
+				Sitesauce Guides
+			</h2>
+			<p class="mt-3 max-w-3xl mx-auto text-xl leading-7 text-brand-700 sm:mt-4 font-ttnorms">
+				An expanding collection of Sitesauce knowledge, from basics to mastery.
+			</p>
+		</div>
+		<div class="mt-12 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:grid-cols-3 lg:max-w-none">
+			{{ collection:guides }}
+				{{ if !no_results }}
+					<a href="{{ link :to='url' absolute='true' }}" class="flex flex-col rounded-lg shadow-brand hover:shadow-brand-hover overflow-hidden transition duration-300 ease-in-out">
+						<div class="flex-shrink-0">
+							<img class="h-48 w-full object-cover" src="{{ og:image :title='title' theme='brand_dark' }}" alt="{{ title }}">
+						</div>
+						<div class="border-b border-l border-r border-brand-300 flex-1 bg-white p-6 flex flex-col justify-between rounded-b-lg">
+							<div class="flex-1">
+								<div>
+									<h3 class="hidden font-ttnorms mt-2 text-xl leading-7 font-semibold text-gray-900">{{ title }}</h3>
+									<p class="font-ttnorms text-base leading-6 text-gray-500">{{ description }}</p>
+								</div>
+							</div>
+							<div class="mt-6 w-full flex items-center justify-between">
+								<span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800 font-ttnorms">{{ type | title }}</span>
+								<div class="flex text-sm leading-5 text-gray-500 font-ttnorms">
+									<time datetime="{{ date format='U000' }}"></time>
+									<span class="mx-1">&middot;</span>
+									<span class="font-medium text-gray-900">{{ reading_time :content='tutorial' }} min read</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				{{ /if }}
+			{{ /collection:guides }}
+		</div>
+	</div>
+</div>

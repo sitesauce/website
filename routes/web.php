@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,3 +15,4 @@
 
 Route::statamic('blog/feed', 'feed', ['layout' => '', 'content_type' => 'xml']);
 Route::statamic('blog/', 'posts.index', ['title' => 'Blog']);
+Route::statamic('guides/', 'guides.index', ['title' => 'Guides']);
