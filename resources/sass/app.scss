@@ -1,5 +1,9 @@
 @tailwind base;
 
+[x-cloak] {
+	@apply hidden;
+}
+
 html {
 	scroll-behavior: smooth;
 }
