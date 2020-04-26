@@ -5,13 +5,14 @@
     "type": "project",
     "require": {
         "php": "^7.2.5",
-		"fideloper/proxy": "^4.2",
-		"fruitcake/laravel-cors": "^1.0",
-		"guzzlehttp/guzzle": "^6.3",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
         "kitetail/zttp": "^0.6.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "spatie/laravel-blink": "^1.4",
+        "spatie/laravel-sitemap": "^5.7",
         "statamic/cms": "3.0.*@beta"
     },
     "require-dev": {
