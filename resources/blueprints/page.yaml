@@ -6,6 +6,26 @@ sections:
       -
         handle: content
         field: bard.content
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: description
+        field:
+          type: textarea
+          localizable: false
+          listable: hidden
+          display: Description
+      -
+        handle: image
+        field:
+          input_type: url
+          type: text
+          instructions: 'An image will be generated with this post''s title if no URL is provided'
+          localizable: false
+          listable: hidden
+          display: Image
+          validate: nullable|url
   configuration:
     display: Configuration
     fields:
