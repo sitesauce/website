@@ -24,4 +24,8 @@
 			@apply outline-none shadow-outline-teal;
 		}
 	}
+
+	code {
+		@apply bg-brand-100 text-sm leading-6 inline-block rounded px-1 whitespace-no-wrap text-brand-600 font-normal align-baseline;
+	}
 }
