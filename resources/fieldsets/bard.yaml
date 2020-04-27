@@ -64,6 +64,13 @@ fields:
               localizable: false
               listable: hidden
               display: Caption
+          -
+            handle: is_caption_left
+            field:
+              type: toggle
+              localizable: false
+              listable: hidden
+              display: 'Show caption on the left side'
       details:
         display: Details
         fields:
@@ -108,13 +115,17 @@ fields:
     buttons:
       - h2
       - h3
+      - h4
+      - anchor
       - bold
       - italic
+      - underline
+      - strikethrough
+      - code
       - unorderedlist
       - orderedlist
-      - removeformat
       - quote
-      - anchor
+      - codeblock
       - image
       - table
     save_html: false
