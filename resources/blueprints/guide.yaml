@@ -4,23 +4,6 @@ sections:
     display: Main
     fields:
       -
-        handle: type
-        field:
-          options:
-            tutorial: Tutorial
-            video: Video
-          clearable: false
-          multiple: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          type: select
-          localizable: false
-          listable: true
-          display: Type
-          validate: 'required|in:tutorial,video'
-      -
         handle: content
         field: bard.content
   meta:
