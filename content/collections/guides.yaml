@@ -1,7 +1,9 @@
 title: Guides
+template: default
 layout: layout
 blueprints:
   - guide
+mount: 5befef89-0dfa-413c-9a35-29a34f647943
 revisions: false
 route: '/guides/{slug}'
 date: true

@@ -1,7 +1,9 @@
 title: Posts
+template: default
 layout: layout
 blueprints:
   - post
+mount: 6e6178ba-5242-413e-94a8-5c2c3f3a8fe0
 revisions: false
 route: '/blog/{slug}'
 date: true
