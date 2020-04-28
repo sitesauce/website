@@ -18,6 +18,7 @@ module.exports = {
 			},
 			zIndex: {
 				1: '1',
+				100: '100',
 			},
 			maxWidth: {
 				'2xs': '8.125rem',
