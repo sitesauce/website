@@ -1,7 +1,7 @@
 ---
 title: Open
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
-updated_at: 1588020532
+updated_at: 1588464223
 hide_date: true
 image: 'https://brand-assets.sitesauce.app/open-card.jpg'
 description: 'Sitesauce is an open startup! Explore our revenue, costs, and metrics on our open page.'
@@ -252,7 +252,7 @@ content:
           -
             type: link
             attrs:
-              href: 'https://usefathom.com/'
+              href: 'https://i.m1guelpf.me/fathom'
               target: _blank
               rel: null
         text: 'Fathom Analytics'
