@@ -33,43 +33,6 @@
 				</div>
 			</div>
 		</footer>
-		<div x-data="{ ...producthunt()}" x-show="show" x-init="init" x-cloak x-transition:enter="ease-out duration-500" x-transition:enter-start="opacity-0 scale-95 translate-y-2" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 translate-y-2" class="transition transform fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 z-100">
-			<div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
-				<div class="p-2 rounded-lg bg-brand-600 shadow-lg sm:p-3">
-					<div class="flex items-center justify-between flex-wrap">
-						<div class="w-0 flex-1 flex items-center">
-							<span class="flex p-2 rounded-lg bg-brand-800">
-								<svg class="h-6 w-6 text-white" viewBox="0 0 1030 1030"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="#FFF" stroke-width="70" d="M529.35 35c40.71 1.7 81.33 7.63 120.43 19.21 64.26 18.72 124.46 51.2 175.46 94.54 51.17 43.32 93.14 97.45 122.26 157.84 27.65 57.21 43.67 120 46.83 183.45.16 3.54.39 7.08.67 10.61v27.7c-1.31 30.98-4.71 61.92-11.66 92.17-17.07 76.57-53.54 148.65-104.85 207.97-44.32 51.37-99.58 93.28-161.14 121.87-60.85 28.48-127.78 43.52-194.92 44.64h-21.79c-33.02-1.5-65.99-5.41-98.13-13.26-70.28-16.84-136.56-49.98-192.32-95.94-49.37-40.62-90.6-91.12-120.29-147.74C62.57 686.19 45 629.23 38.24 571.01c-1.7-13.84-2.33-27.76-3.24-41.66v-27.71c.79-13.31 1.41-26.64 2.93-39.89 4.72-42.72 15.22-84.8 31.16-124.71 31.64-79.43 85.05-149.98 152.79-202.14 59.19-45.83 129.28-77.49 202.85-91.4 25.03-4.88 50.46-7.27 75.91-8.5h28.71z"/><path fill="#FFF" d="M564.99 275c10.68.03 21.4-.23 32.03.97 33.08 3.46 65.02 17.12 90.35 38.69 23.83 20.04 41.92 46.85 51.45 76.5 13.04 39.79 10.38 84.45-7.32 122.4-18.74 40.83-54.58 73.38-97.04 88.07-18.73 6.6-38.63 9.62-58.46 9.37-44.33.01-88.65-.03-132.98.02-.06 47.99.02 95.97-.04 143.96-31.99.03-63.97.03-95.96 0-.03-159.99-.03-319.97 0-479.96 72.66-.05 145.32-.01 217.97-.02zm3.01 96c-27.773.007-69.433.013-124.98.02-.027 63.98-.027 111.967 0 143.96 42.33.05 84.65.01 126.98.02 6.68-.03 13.42.23 20.04-.86 16.17-2.43 31.35-10.66 42.29-22.79 10.79-11.82 17.43-27.33 18.48-43.3 1.16-16-3.21-32.35-12.31-45.58-10.66-15.74-27.77-26.96-46.51-30.28-7.9-1.56-15.99-1.14-23.99-1.19z"/></g></svg>
-							</span>
-							<p class="ml-3 font-medium text-white truncate">
-								<span class="md:hidden">
-									We're on ProductHunt!
-								</span>
-								<span class="hidden md:inline font-spoof">
-									Sitesauce is live today on ProductHunt!
-								</span>
-							</p>
-						</div>
-						<div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-							<div class="rounded-md shadow-sm">
-								<a href="https://www.producthunt.com/posts/sitesauce" target="_blank" class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-brand-600 bg-white hover:text-brand-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 font-ttnorms">
-									Check us out
-								</a>
-							</div>
-						</div>
-						<div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
-							<button type="button" @click="hide()" class="-mr-1 flex p-2 rounded-md hover:bg-brand-500 focus:outline-none focus:bg-brand-500 transition ease-in-out duration-150" aria-label="Dismiss">
-								<svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="">
-		</div>
 		<script src="{{ mix src='/js/app.js' }}"></script>
 		{{ if environment === 'production' }}
 			<script src="https://cdn.usefathom.com/3.js" site="ATRFRDDR"></script>
