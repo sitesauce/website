@@ -30,5 +30,10 @@ class AuthServiceProvider extends ServiceProvider
         app(ProtectorManager::class)->extend('sitesauce', function ($app) {
             return new SitesauceDriver;
         });
+        
+        Gate::policy(
+            \Statamic\Contracts\Entries\Entry::class,
+            \App\Policies\EntryPolicy::class
+        );
     }
 }

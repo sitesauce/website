@@ -3,3 +3,5 @@ guide_author:
   permissions:
     - 'access cp'
     - 'view guides entries'
+    - 'edit guides entries'
+    - 'create guides entries'
