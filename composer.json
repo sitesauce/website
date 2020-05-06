@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.0",
         "spatie/laravel-blink": "^1.4",
         "spatie/laravel-sitemap": "^5.7",
+        "spatie/statamic-responsive-images": "^1.2",
         "statamic/cms": "3.0.*@beta"
     },
     "require-dev": {
