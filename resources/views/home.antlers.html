@@ -11,17 +11,18 @@
 {{ /section:meta_tags }}
 <div class="overflow-hidden">
 	<div class="relative overflow-visible h-auto bg-brand-50 pt-24 lg:pt-48 pb-24 px-5%">
-		<img src="/img/background/scribble-header-left.svg" class="hidden lg:block image-53" />
-		<img src="/img/background/scribble-header-right.svg" class="image-52" />
+		<img src="/img/background/scribble-header-left.svg" alt="" class="hidden lg:block image-53" />
+		<img src="/img/background/scribble-header-right.svg" alt="" class="image-52" />
 		<div class="container text-center">
 			<h1 class="max-w-4xl my-6 font-spoof text-4xl md:text-5xl text-black leading-snug md:leading-extra-loose mx-auto tracking-tight text-center font-bold">Generate a static version of your website in one click</h1>
 			<p class="font-ttnorms text-black text-xl leading-relaxed text-center mb-3 mx-auto">Sitesauce converts dynamic websites (like <span data-backend-anim><a class="rounded border-b-2 border-black hover:border-brand-400 hover:text-brand-400" href="https://wordpress.com" target="_blank">WordPress</a></span>-powered websites) into static sites, and keeps content in sync.</p>
 			<a href="https://app.sitesauce.app/register" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">Start Your 7-Day Trial</a>
 		</div>
+		<a href="#how-it-works" data-animation-type="lottie" data-src="./animations/scroll-down.json" data-loop="1" data-direction="1" data-autoplay="1" data-renderer="svg" data-default-duration="2.0625" data-duration="0" class="absolute inset-x-0 top-auto z-50 mx-auto w-20" style="bottom: -54px;"></a>
 	</div>
 	<div id="features" class="relative bg-gray-50 px-5% py-24">
-		{{ responsive_img src="/assets/landing/background/purple-section2-blob.png" class="image-41" }}
-		<img src="/img/background/scribble-section2-right.svg" class="image-56" />
+		<img src="/img/background/purple-section2-blob.png" alt="" class="image-41" />
+		<img src="/img/background/scribble-section2-right.svg" alt="" class="image-56" />
 		<div class="container text-center">
 			<h1
 				class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">
@@ -135,13 +136,17 @@
 			</div>
 			<a href="#pricing-focus" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">See pricing</a>
 		</div>
-		<img src="/img/background/line.svg" class="image-33 _3" />
+		<img src="/img/background/line.svg" alt="" class="image-33 _3" />
 	</div>
 	<div id="how-it-works" class="relative px-5% py-24 bg-white">
-		{{ responsive_img src="/assets/landing/background/blue-section1-blob.png" class="md:hidden lg:block image-35" }}
-		{{ responsive_img src="/assets/landing/background/orange-section1-blob.png" class="image-36" }}
-		<img src="/img/background/scribble-section1-left.svg" class="md:hidden lg:block image-55" />
-		<img src="/img/background/scribble-section1-right.svg" class="image-54" />
+		<img src="/img/background/blue-section1-blob.png"
+			srcset="/img/background/blue-section1-blob-x500.png 500w, /img/background/blue-section1-blob.png 600w"
+			sizes="(max-width: 767px) 250px, 300px" alt="" class="md:hidden lg:block image-35" />
+		<img src="/img/background/orange-section1-blob.png"
+			srcset="/img/background/orange-section1-blob-x500.png 500w, /img/background/orange-section1-blob.png 600w"
+			sizes="300px" alt="" class="image-36" />
+		<img src="/img/background/scribble-section1-left.svg" alt="" class="md:hidden lg:block image-55" />
+		<img src="/img/background/scribble-section1-right.svg" alt="" class="image-54" />
 		<div class="container">
 			<h1 class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">How does it work?</h1>
 			<div class="mt-10 flex flex-col-reverse lg:flex-row items-center justify-between">
@@ -152,7 +157,7 @@
 						It took us less than a minute to launch a static version of our WordPress website.
 						Everything just worked as you'd expect it to!</p>
 					<div class="text-left inline-flex items-center">
-						{{ responsive_img src="/assets/landing/avatars/peter.jpeg" width="40" class="mr-3 rounded-full" alt="Peter Suhm" }}
+						<img src="/img/avatars/peter.jpeg" width="40" alt="Peter Suhm" class="mr-3 rounded-full" />
 						<p class="text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed">
 							Peter Suhm, Founder of <a href="https://branchci.com/?ref=sitesauce" target="_blank" style="color: #5352bb;">Branch</a>
 						</p>
@@ -198,23 +203,25 @@
 				</div>
 			</div>
 		</div>
-		<img src="/img/background/line.svg" class="image-33 _2" />
+		<img src="/img/background/line.svg" alt="" class="image-33 _2" />
 	</div>
 	<div id="demo" class="bg-gray-50 relative py-24 px-5%">
-		<img src="/img/background/scribble-section5-left.svg" class="image-63" />
+		<img src="/img/background/scribble-section5-left.svg" alt="" class="image-63" />
 		<div class="container text-center">
 			<h1 class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">See it in action</h1>
 			<p class="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0 max-w-3xl mx-auto">Learn everything Sitesauce has to offer in this short introductory video.</p>
 			<div class="relative mt-20 border-4 border-brand-400 rounded-lg shadow-brand overflow-hidden z-1">
 				<div class="relative p-0" style="padding-top: 56.25% !important; margin: -2px;">
-					<iframe class="absolute inset-0 w-full h-full" src="https://player.vimeo.com/video/413646262?title=0&byline=0&portrait=0&texttrack=en&dnt=1&transparent=1&quality=1080p" frameborder="0" allow="autoplay; fullscreen" allowfullscreen ></iframe>
+					<iframe class="absolute inset-0 w-full h-full"
+						src="https://player.vimeo.com/video/413646262?title=0&byline=0&portrait=0&texttrack=en&dnt=1&transparent=1&quality=1080p"
+						frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
-		{{ responsive_img src="/assets/landing/background/green-section3-blob.png" class="image-48" }}
-		<img src="/img/background/scribble-section3-left.svg" class="image-57" />
-		{{ responsive_img src="/assets/landing/background/blue-section4-blob.png" class="image-47 z-10" }}
-		<img src="/img/background/scribble-section4-right.svg" class="image-58 z-20" />
+		<img src="/img/background/green-section3-blob.png" alt="" class="image-48" />
+		<img src="/img/background/scribble-section3-left.svg" alt="" class="image-57" />
+		<img src="/img/background/blue-section4-blob.png" alt="" class="image-47 z-10" />
+		<img src="/img/background/scribble-section4-right.svg" alt="" class="image-58 z-20" />
 	</div>
 	{{# <div class="bg-brand-50 -mt-5 pt-5">
 		<div class="container">
@@ -297,15 +304,17 @@
 		</div>
 	</div>
 	<div id="pricing" class="bg-brand-50 px-5% py-24 relative" x-data="{ yearly: false }">
-		{{ responsive_img src="/assets/landing/background/yellow-section6-blob.png" class="image-40" }}
-		<img src="/img/background/scribble-section6-left.svg" class="image-59" />
+		<img src="/img/background/yellow-section6-blob.png" alt="" class="image-40" />
+		<img src="/img/background/scribble-section6-left.svg" alt="" class="image-59" />
 		<div class="container text-center">
 			<h1
 				class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">
 				Simple, no-tricks pricing</h1>
 			<p id="pricing-focus" class="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">No
 				surprises or hidden fees, ever.</p>
-				{{ responsive_img src="/assets/landing/background/pricing-separator.png" class="image-76 mx-auto" }}
+			<img src="/img/background/pricing-separator.png"
+				srcset="/img/background/pricing-separator-x500.png 500w, /img/background/pricing-separator-x800.png 800w, /img/background/pricing-separator-x1080.png 1080w, /img/background/pricing-separator.png 1448w"
+				sizes="(max-width: 479px) 280px, (max-width: 767px) 300px, 400px" alt="" class="image-76 mx-auto" />
 			<div
 				class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex my-10 shadow-brand border-4 border-brand-400">
 				<div class="bg-white px-6 py-8 lg:flex-shrink-1 lg:p-12">
@@ -409,7 +418,7 @@
 					<a class="font-spoof font-bold text-lg" href="mailto:miguel@sitesauce.app?subject=Get%20Started%20Call"
 						target="_blank">Schedule
 						now</a>
-					<img src="/img/background/arrow.svg" class="ml-2" />
+					<img src="/img/background/arrow.svg" alt="" class="ml-2" />
 				</div>
 			</div>
 			<div x-show="!yearly" class="pt-12 md:pt-0 z-30 relative">
@@ -421,7 +430,7 @@
 				<div class="inline-flex items-center justify-center mt-10 font-spoof text-black w-full pb-2">
 					<a class="font-spoof font-bold text-lg" href="#pricing-focus" @click="yearly = true">See annual
 						pricing</a>
-					<img src="/img/background/arrow.svg" class="ml-2" />
+					<img src="/img/background/arrow.svg" alt="" class="ml-2" />
 				</div>
 			</div>
 			<div x-show="yearly" class="pt-12 md:pt-0 z-30 relative">
@@ -433,17 +442,17 @@
 				<div class="inline-flex items-center justify-center mt-10 font-spoof text-black w-full pb-2">
 					<a class="font-spoof font-bold text-lg" href="#pricing-focus" @click="yearly = false">See
 						monthly pricing</a>
-					<img src="/img/background/arrow.svg" class="ml-2" />
+					<img src="/img/background/arrow.svg" alt="" class="ml-2" />
 				</div>
 			</div>
 		</div>
-		{{ responsive_img src="/assets/landing/background/purple-section7-blob.png" class="image-46" }}
-		<img src="/img/background/scribble-section7-right.svg" class="image-60" />
+		<img src="/img/background/purple-section7-blob.png" alt="" class="image-46" />
+		<img src="/img/background/scribble-section7-right.svg" alt="" class="image-60" />
 	</div>
 	<div class="bg-white relative z-1">
 		<div id="faq" class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-			{{ responsive_img src="/assets/landing/background/red-section8-blob.png" class="image-45 _87" }}
-			<img src="/img/background/scribble-section8-left.svg" class="image-61" />
+			<img src="/img/background/red-section8-blob.png" alt="" class="image-45 _87" />
+			<img src="/img/background/scribble-section8-left.svg" alt="" class="image-61" />
 			<h2
 				class="text-center font-spoof text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 relative">
 				Frequently asked questions
@@ -563,6 +572,6 @@
 				</dl>
 			</div>
 		</div>
-		<img src="/img/background/scribble-section9-left.svg" class="hidden md:block image-62" />
+		<img src="/img/background/scribble-section9-left.svg" alt="" class="hidden md:block image-62" />
 	</div>
 </div>
