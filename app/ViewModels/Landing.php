@@ -15,7 +15,7 @@ class Landing extends ViewModel
     {
         return [
             'header_title' => 'Generate a static version of your website in one click',
-            'header_description' => 'Sitesauce converts dynamic websites (like <span data-backend-anim><a class="rounded border-b-2 border-black hover:border-brand-400 hover:text-brand-400" href="https://wordpress.com" target="_blank">WordPress</a></span>-powered websites) into static sites, and keeps content in sync.',
+            'header_description' => 'Sitesauce converts dynamic websites (like <span data-backend-anim><a class="rounded border-b-2 border-black hover:border-brand-400 hover:text-brand-400" href="https://sitesauce.app/for/wordpress" target="_blank">WordPress</a></span>-powered websites) into static sites, and keeps content in sync.',
             'header_cta' => 'Start your 7-day trial',
         ];
     }

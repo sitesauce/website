@@ -8,7 +8,7 @@ Array.from(document.querySelectorAll('[data-backend-anim]')).forEach(async el =>
 		{ name: 'Laravel', url: 'https://laravel.com' },
 		{ name: 'Wink', url: 'https://wink.themsaid.com' },
 		{ name: 'CMS', url: null },
-		{ name: 'WordPress', url: 'https://wordpress.com' },
+		{ name: 'WordPress', url: 'https://sitesauce.app/for/wordpress' },
 	]
 
 	const work = i =>
