@@ -1,0 +1,10 @@
+title: Marketing
+template: home
+layout: layout
+blueprints:
+  - marketing
+revisions: false
+route: 'for/{slug}'
+date_behavior:
+  past: public
+  future: private

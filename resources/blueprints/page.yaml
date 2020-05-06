@@ -10,21 +10,30 @@ sections:
     display: Meta
     fields:
       -
-        handle: description
+        handle: meta_title
         field:
-          type: textarea
+          input_type: text
+          type: text
           localizable: false
           listable: hidden
-          display: Description
+          display: 'Meta Title'
       -
-        handle: image
+        handle: meta_description
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Meta Description'
+      -
+        handle: meta_image
         field:
           input_type: url
           type: text
           instructions: 'An image will be generated with this post''s title if no URL is provided'
           localizable: false
           listable: hidden
-          display: Image
+          display: 'Meta Image'
           validate: nullable|url
   configuration:
     display: Configuration

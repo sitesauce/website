@@ -3,8 +3,8 @@ title: Open
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
 updated_at: 1588464223
 hide_date: true
-image: 'https://brand-assets.sitesauce.app/open-card.jpg'
-description: 'Sitesauce is an open startup! Explore our revenue, costs, and metrics on our open page.'
+meta_image: 'https://brand-assets.sitesauce.app/open-card.jpg'
+meta_description: 'Sitesauce is an open startup! Explore our revenue, costs, and metrics on our open page.'
 id: e418a3f9-53bc-4060-a40e-7203c363d567
 content:
   -

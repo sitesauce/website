@@ -1,0 +1,328 @@
+title: Marketing
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Title
+  header:
+    display: Header
+    fields:
+      -
+        handle: header_title
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Title
+      -
+        handle: header_description
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Description
+      -
+        handle: header_cta
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Call To Action'
+  features:
+    display: Features
+    fields:
+      -
+        handle: features_title
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Title
+      -
+        handle: features_description
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Description
+      -
+        handle: features
+        field:
+          fields:
+            -
+              handle: icon
+              field:
+                options:
+                  wallet: Wallet
+                  bolt: Bolt
+                  processor: Processor
+                  shield: Shield
+                  cloud: Cloud
+                  person: Person
+                clearable: false
+                multiple: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                type: select
+                localizable: false
+                listable: hidden
+                display: Icon
+            -
+              handle: title
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Title
+            -
+              handle: description
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                type: markdown
+                localizable: false
+                listable: hidden
+                display: Description
+          mode: stacked
+          max_rows: 6
+          min_rows: 6
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Features
+      -
+        handle: features_cta
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Call To Action'
+  steps:
+    display: Steps
+    fields:
+      -
+        handle: steps_testimonial
+        field:
+          fields:
+            -
+              handle: content
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                type: markdown
+                localizable: false
+                listable: hidden
+                display: Content
+            -
+              handle: user
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: User
+            -
+              handle: company
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Company
+            -
+              handle: avatar
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                type: assets
+                localizable: false
+                listable: hidden
+                display: Avatar
+            -
+              handle: company_url
+              field:
+                input_type: url
+                type: text
+                localizable: false
+                listable: hidden
+                display: 'Company URL'
+            -
+              handle: company_color
+              field:
+                theme: classic
+                lock_opacity: true
+                default_color_mode: HEXA
+                color_modes:
+                  - hex
+                type: color
+                localizable: false
+                listable: hidden
+                display: 'Company Color'
+          mode: stacked
+          max_rows: 1
+          min_rows: 1
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Testimonial
+      -
+        handle: steps
+        field:
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Title
+            -
+              handle: description
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                type: markdown
+                localizable: false
+                listable: hidden
+                display: Description
+          mode: stacked
+          max_rows: 3
+          min_rows: 3
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Steps
+  pricing:
+    display: Pricing
+    fields:
+      -
+        handle: pricing_features
+        field:
+          fields:
+            -
+              handle: name
+              field:
+                input_type: text
+                type: text
+                localizable: false
+                listable: hidden
+                display: Name
+          mode: stacked
+          max_rows: 4
+          min_rows: 4
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Features
+      -
+        handle: pricing_cta
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Call to Action'
+  faq:
+    display: FAQ
+    fields:
+      -
+        handle: questions
+        field:
+          fields:
+            -
+              handle: question
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                type: markdown
+                localizable: false
+                listable: hidden
+                display: Question
+            -
+              handle: answer
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                type: markdown
+                localizable: false
+                listable: hidden
+                display: Answer
+          mode: stacked
+          reorderable: true
+          type: grid
+          localizable: false
+          listable: hidden
+          display: Questions
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Meta Title'
+      -
+        handle: meta_description
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Meta Description'
+      -
+        handle: meta_image
+        field:
+          input_type: url
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Meta Image'

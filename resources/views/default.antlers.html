@@ -1,13 +1,13 @@
 {{ section:meta_tags }}
-	<meta name="description" content="{{ description }}" />
+	<meta name="description" content="{{ meta_description }}" />
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="{{ title }} - Sitesauce">
-	<meta property="og:description" content="{{ description }}">
-	<meta property="og:image" content="{{ if image }}{{ image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
+	<meta property="og:description" content="{{ meta_description }}">
+	<meta property="og:image" content="{{ if meta_image }}{{ meta_image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:title" content="{{ title }} - Sitesauce">
-	<meta property="twitter:description" content="{{ description }}">
-	<meta property="twitter:image" content="{{ if image }}{{ image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
+	<meta property="twitter:description" content="{{ meta_description }}">
+	<meta property="twitter:image" content="{{ if meta_image }}{{ meta_image }}{{ else }}{{ og:image :title='title' }}{{ /if }}">
 {{ /section:meta_tags }}
 
 <div class="bg-brand-50 overflow-hidden pt-16 z-1 relative">

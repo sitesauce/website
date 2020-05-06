@@ -1,140 +1,97 @@
 {{ section:meta_tags }}
-	<meta name="description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide." />
+	<meta name="description" content="{{ meta_description }}" />
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Sitesauce - A static site for your dynamically-generated website">
-	<meta property="og:description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.">
-	<meta property="og:image" content="https://brand-assets.sitesauce.app/twitter-card.png">
+	<meta property="og:title" content="{{ meta_title }}">
+	<meta property="og:description" content="{{ meta_description }}">
+	<meta property="og:image" content="{{ meta_image }}">
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Sitesauce - A static site for your dynamically-generated website">
-	<meta property="twitter:description" content="Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.">
-	<meta property="twitter:image" content="https://brand-assets.sitesauce.app/twitter-card.png">
+	<meta property="twitter:title" content="{{ meta_title }}">
+	<meta property="twitter:description" content="{{ meta_description }}">
+	<meta property="twitter:image" content="{{ meta_image }}">
 {{ /section:meta_tags }}
 <div class="overflow-hidden">
 	<div class="relative overflow-visible h-auto bg-brand-50 pt-24 lg:pt-48 pb-24 px-5%">
 		<img src="/img/background/scribble-header-left.svg" alt="" class="hidden lg:block image-53" />
 		<img src="/img/background/scribble-header-right.svg" alt="" class="image-52" />
 		<div class="container text-center">
-			<h1 class="max-w-4xl my-6 font-spoof text-4xl md:text-5xl text-black leading-snug md:leading-extra-loose mx-auto tracking-tight text-center font-bold">Generate a static version of your website in one click</h1>
-			<p class="font-ttnorms text-black text-xl leading-relaxed text-center mb-3 mx-auto">Sitesauce converts dynamic websites (like <span data-backend-anim><a class="rounded border-b-2 border-black hover:border-brand-400 hover:text-brand-400" href="https://wordpress.com" target="_blank">WordPress</a></span>-powered websites) into static sites, and keeps content in sync.</p>
-			<a href="https://app.sitesauce.app/register" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">Start Your 7-Day Trial</a>
+			<h1 class="max-w-4xl my-6 font-spoof text-4xl md:text-5xl text-black leading-snug md:leading-extra-loose mx-auto tracking-tight text-center font-bold">{{ header_title }}</h1>
+			<div class="font-ttnorms text-black text-xl leading-relaxed text-center mb-3 mx-auto">
+				{{ header_description | markdown }}
+			</div>
+			<a href="https://app.sitesauce.app/register" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">{{ header_cta }}</a>
 		</div>
-		<a href="#how-it-works" data-animation-type="lottie" data-src="./animations/scroll-down.json" data-loop="1" data-direction="1" data-autoplay="1" data-renderer="svg" data-default-duration="2.0625" data-duration="0" class="absolute inset-x-0 top-auto z-50 mx-auto w-20" style="bottom: -54px;"></a>
 	</div>
 	<div id="features" class="relative bg-gray-50 px-5% py-24">
 		<img src="/img/background/purple-section2-blob.png" alt="" class="image-41" />
 		<img src="/img/background/scribble-section2-right.svg" alt="" class="image-56" />
 		<div class="container text-center">
-			<h1
-				class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">
-				What's in for me?</h1>
-			<p class="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">Enjoy all the benefits static
-				sites provide while keeping everything good about the backend.</p>
+			<h1 class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">{{ features_title }}</h1>
+			<div class="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">
+				{{ features_description | markdown }}
+			</div>
 			<div class="mt-20 grid col-gap-13 row-gap-24 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-auto-6 sm:grid-rows-auto-3 lg:grid-rows-auto-2"
 				style="grid-auto-columns: 1fr;">
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<path class="text-brand-400" fill="currentColor" d="M98 66v20a4 4 0 0 1-4 4H8.5A8.5 8.5 0 0 1 0 81.5v-63C0 13.8 3.8 10 8.5 10H82a4 4 0 0 1 4 4h4v3h4v4a4 4 0 0 1 4 4v21a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2z"></path>
-								<path class="text-brand-400" fill="currentColor" d="M70 56a10 10 0 0 1 10-10h18a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H80a10 10 0 0 1-10-10z"></path>
-								<circle class="text-brand-300" cx="80" cy="56" r="5" fill="currentColor"></circle>
-								<path class="text-brand-300" fill="currentColor" d="M8.5 16H88v3h4v2H8.5a2.5 2.5 0 0 1 0-5z"></path>
-								<path class="text-brand-900" fill="currentColor" d="M2 80H0v2a8 8 0 0 0 8 8h86a4 4 0 0 0 4-4v-6h-2v4a2 2 0 0 1-2 2H8a6 6 0 0 1-6-6zm98-21v-2 2zm-2 9H80a10 10 0 0 1-9.95-11A10 10 0 0 0 80 66h18v2z" opacity=".2"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M98 66v20a4 4 0 0 1-4 4H8.5A8.5 8.5 0 0 1 0 81.5v-63C0 13.8 3.8 10 8.5 10H82a4 4 0 0 1 4 4h4v3h4v4a4 4 0 0 1 4 4v21a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2zM2 18.5A6.5 6.5 0 0 0 8.5 25H94v1H8.5A7.5 7.5 0 0 1 2 22.24V81.5A6.5 6.5 0 0 0 8.5 88H94a2 2 0 0 0 2-2V66H80a10 10 0 1 1 0-20h16V25a2 2 0 0 0-2-2H8.5a4.5 4.5 0 1 1 0-9H84a2 2 0 0 0-2-2H8.5A6.5 6.5 0 0 0 2 18.5zM8.5 16a2.5 2.5 0 0 0 0 5H92v-2H8.5a.5.5 0 1 1 0-1H88v-2H8.5zM80 48a8 8 0 1 0 0 16h18V48H80zM8.5 29c-1.69 0-3.28-.4-4.7-1.1l.45-.9c1.28.64 2.72 1 4.25 1v1zm3.5-1h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm8 0h4v1h-4v-1zm1 57h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zM8 38v24H7V38h1zm77 18a5 5 0 1 1-10 0 5 5 0 0 1 10 0zm-5 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
-							</svg>
+				{{ features }}
+					<div>
+						<div class="relative min-h-feature">
+							<div class="relative w-20 mx-auto">
+								{{ if icon == 'wallet' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<path class="text-brand-400" fill="currentColor" d="M98 66v20a4 4 0 0 1-4 4H8.5A8.5 8.5 0 0 1 0 81.5v-63C0 13.8 3.8 10 8.5 10H82a4 4 0 0 1 4 4h4v3h4v4a4 4 0 0 1 4 4v21a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2z"></path>
+										<path class="text-brand-400" fill="currentColor" d="M70 56a10 10 0 0 1 10-10h18a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H80a10 10 0 0 1-10-10z"></path>
+										<circle class="text-brand-300" cx="80" cy="56" r="5" fill="currentColor"></circle>
+										<path class="text-brand-300" fill="currentColor" d="M8.5 16H88v3h4v2H8.5a2.5 2.5 0 0 1 0-5z"></path>
+										<path class="text-brand-900" fill="currentColor" d="M2 80H0v2a8 8 0 0 0 8 8h86a4 4 0 0 0 4-4v-6h-2v4a2 2 0 0 1-2 2H8a6 6 0 0 1-6-6zm98-21v-2 2zm-2 9H80a10 10 0 0 1-9.95-11A10 10 0 0 0 80 66h18v2z" opacity=".2"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M98 66v20a4 4 0 0 1-4 4H8.5A8.5 8.5 0 0 1 0 81.5v-63C0 13.8 3.8 10 8.5 10H82a4 4 0 0 1 4 4h4v3h4v4a4 4 0 0 1 4 4v21a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2zM2 18.5A6.5 6.5 0 0 0 8.5 25H94v1H8.5A7.5 7.5 0 0 1 2 22.24V81.5A6.5 6.5 0 0 0 8.5 88H94a2 2 0 0 0 2-2V66H80a10 10 0 1 1 0-20h16V25a2 2 0 0 0-2-2H8.5a4.5 4.5 0 1 1 0-9H84a2 2 0 0 0-2-2H8.5A6.5 6.5 0 0 0 2 18.5zM8.5 16a2.5 2.5 0 0 0 0 5H92v-2H8.5a.5.5 0 1 1 0-1H88v-2H8.5zM80 48a8 8 0 1 0 0 16h18V48H80zM8.5 29c-1.69 0-3.28-.4-4.7-1.1l.45-.9c1.28.64 2.72 1 4.25 1v1zm3.5-1h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm12 0v1h-4v-1h4zm4 0h4v1h-4v-1zm8 0h4v1h-4v-1zm1 57h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zm-12 0h4v1h-4v-1zm-4 0v1h-4v-1h4zM8 38v24H7V38h1zm77 18a5 5 0 1 1-10 0 5 5 0 0 1 10 0zm-5 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+									</svg>
+								{{ elseif icon == 'bolt' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<polygon class="text-brand-400" fill="currentColor" points="71.719 42 62 42 59.046 42 53.8 42 52.323 42 52.871 40.629 68.323 2 31.64 2 20.44 58 42 58 44.44 58 43.961 60.392 39.613 82.133"></polygon>
+										<path class="text-brand-500" fill="currentColor" d="M59.45 41H53.8l.4-1L69.4 2h5.65l-14.9 37.26-.7 1.74zM39.19 84.27L73 42h4.84L37.57 92.33l1.62-8.06z"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M42 60H18l.2-1 .2-1L29.8 1l.2-1h48l-.8 2-14.4 36-.8 2H82l-1.6 2-43.68 54.6L34 100l.85-4.27L41.6 62l.4-2zm17.45-19l.7-1.74L75.04 2H69.4L54.2 40l-.4 1h5.65zm12.27 1H52.32l.55-1.37L68.32 2H31.64l-11.2 56h24l-.48 2.4-4.35 21.73L71.71 42zM39.19 84.27l-1.62 8.06L77.84 42H73L39.19 84.27zM35 6h12l-.2 1H35.82l-2.8 14H32l3-15zm-4 20h1.02l-2 10H29l2-10z"></path>
+									</svg>
+								{{ elseif icon == 'processor' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<path class="text-brand-400" fill="currentColor" d="M6 0a6 6 0 0 0-6 6v88a6 6 0 0 0 6 6h88a6 6 0 0 0 6-6V6a6 6 0 0 0-6-6H6z"></path>
+										<path class="text-brand-300" fill="currentColor" d="M24 11h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zM24 81h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm-61-5v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm70 48v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8z"></path>
+										<path class="text-brand-300" fill="currentColor" fill-rule="nonzero" d="M18 20c0-1.1.9-2 2-2h60a2 2 0 0 1 2 2v60a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V20z"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M6 0h88a6 6 0 0 1 6 6v88a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6zm88 2H6a4 4 0 0 0-4 4v88a4 4 0 0 0 4 4h88a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4zM6 4h88a2 2 0 0 1 2 2v88a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2zm88 1H6a1 1 0 0 0-1 1v88a1 1 0 0 0 1 1h88a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM71 82h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-3a2 2 0 0 1-2-2v-3h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-3c0-1.1.9-2 2-2h3v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h3a2 2 0 0 1 2 2v3h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v3a2 2 0 0 1-2 2h-3v4h-1v3h-4v-3h-1v-4zM20 20v60h60V20H20zm9 8h43v44H28V28h1zm42 1H29v42h42V29zm-40 2h38v38H31V31zm1 1v36h36V32H32zm-8-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm1-2a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm53 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM24 78a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm1-2a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm53 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-1 9h-2v2h2v-2zm-10 2h2v-2h-2v2zm-6-2h-2v2h2v-2zm-10 2h2v-2h-2v2zm-6-2h-2v2h2v-2zm-10 2h2v-2h-2v2zm-8-2v2h2v-2h-2zM12 73v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm74 50h2v-2h-2v2zm2-8v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-8h2v-2h-2v2zM75 12h-2v2h2v-2zm-2 70v2h2v-2h-2zm-8 0v2h2v-2h-2zm-6 0h-2v2h2v-2zm-10 0v2h2v-2h-2zm-6 0h-2v2h2v-2zm-10 0v2h2v-2h-2zm-8 0v2h2v-2h-2zm-7-9h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm64 50h2v-2h-2v2zm0-8h2v-2h-2v2zm0-10v2h2v-2h-2zm0-6h2v-2h-2v2zm0-10v2h2v-2h-2zm0-6h2v-2h-2v2zm0-8h2v-2h-2v2zm-7-9v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2z"></path>
+									</svg>
+								{{ elseif icon == 'shield' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<path class="text-brand-500" fill="currentColor" d="M50 2A85.6 85.6 0 0 0 8 12.94v47.05c0 10.26 7.7 22.22 17.04 26.47L50 97.8l24.96-11.34C84.3 82.2 92 70.26 92 59.99V12.94A85.6 85.6 0 0 0 50 2z"></path>
+										<path class="text-brand-100" fill="currentColor" d="M71.23 78.27C77.37 75.47 83 66.73 83 59.99V18.41A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4V60c0 6.73 5.64 15.48 11.77 18.27L50 87.92l21.23-9.65z"></path>
+										<path class="text-brand-400" fill="currentColor" d="M50 62a16 16 0 1 0 0-32 16 16 0 0 0 0 32z"></path>
+										<path class="text-brand-50" fill="currentColor" d="M56 44h3v10H41V44h3v-2a6 6 0 0 1 12 0v2zm-4 0v-2a2 2 0 1 0-4 0v2h4z"></path>
+										<path class="text-brand-900" fill="currentColor" d="M67.97 47a18 18 0 1 1-35.95 0 18 18 0 0 0 35.95 0zM12 15.4v-.08A81.62 81.62 0 0 1 50 6a81.62 81.62 0 0 1 38 9.32v.08l-2.97 1.78A78.5 78.5 0 0 0 50 9a78.5 78.5 0 0 0-35.03 8.18L12 15.4zm71 5.01v-2A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4v2.01A76.62 76.62 0 0 1 50 13c11.5 0 22.72 2.52 33 7.4v.01z" opacity=".2"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M94 60c0 11.04-8.15 23.7-18.21 28.28L50 100 24.21 88.28C14.15 83.7 6 71.04 6 59.99V11.77A87.6 87.6 0 0 1 50 0a87.6 87.6 0 0 1 44 11.77V60zM50 2A85.6 85.6 0 0 0 8 12.94v47.05c0 10.26 7.7 22.22 17.04 26.47L50 97.8l24.96-11.34C84.3 82.2 92 70.26 92 59.99V12.94A85.6 85.6 0 0 0 50 2zm0 4a81.62 81.62 0 0 1 38 9.32v44.67c0 8.7-6.77 19.23-14.7 22.83L50 93.4 26.7 82.8C18.78 79.22 12 68.7 12 60V15.32A81.62 81.62 0 0 1 50 6zM27.11 81.9L50 92.32l22.89-10.4C80.45 78.47 87 68.3 87 59.99V15.92A80.62 80.62 0 0 0 50 7a80.62 80.62 0 0 0-37 8.92V60c0 8.3 6.55 18.48 14.11 21.92zM15 60V17.14A78.64 78.64 0 0 1 50 9a78.64 78.64 0 0 1 35 8.15V60c0 7.53-6.09 16.98-12.94 20.1L50 90.1 27.94 80.1C21.09 76.98 15 67.5 15 59.99zm68 0V18.4A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4V60c0 6.73 5.64 15.48 11.77 18.27L50 87.92l21.23-9.65C77.37 75.47 83 66.73 83 59.99zm-33 4a18 18 0 1 1 0-36 18 18 0 0 1 0 36zm16-18a16 16 0 1 0-32 0 16 16 0 0 0 32 0zm-29.04 5.11A14 14 0 0 1 50 32v1a13 13 0 0 0-12.13 17.69l-.9.42zM56 44h3v10H41V44h3v-2a6 6 0 0 1 12 0v2zm-14 9h16v-6H42v6zm16-8H42v1h16v-1zm-3-1v-2a5 5 0 1 0-10 0v2h2v-2a3 3 0 0 1 6 0v2h2zm-3 0v-2a2 2 0 0 0-4 0v2h4z"></path>
+									</svg>
+								{{ elseif icon == 'cloud' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<path class="text-brand-100" fill="currentColor" d="M83 74a17 17 0 0 0 3.93-33.54 15 15 0 0 0-18.08-16.13 27 27 0 0 0-50 5.9A22 22 0 0 0 22 74h61z"></path>
+										<circle class="text-brand-400" cx="50" cy="73" r="18" fill="currentColor"></circle>
+										<path class="text-red-50" fill="currentColor" d="M50 68a5.02 5.02 0 0 0-5 5c0 1.38.56 2.63 1.46 3.54l-.7.7-1.42 1.42-.7.7A9.06 9.06 0 0 1 41 73a9 9 0 0 1 9-9v-3l1 1 3.3 3.3.7.7-.7.7L51 70l-1 1v-3zm5 5c0-1.38-.56-2.63-1.46-3.54l.7-.7 1.42-1.42.7-.7A9.06 9.06 0 0 1 59 73a9 9 0 0 1-9 9v3l-1-1-3.3-3.3-.7-.7.7-.7L49 76l1-1v3a5.02 5.02 0 0 0 5-5z"></path>
+										<path class="text-brand-900" fill="currentColor" d="M32.7 68a18 18 0 0 0-.67 6H22A22 22 0 0 1 .83 46H2.1A20 20 0 0 0 22 68h10.7zm64.84-19.8a16.91 16.91 0 0 1 2.45 8.3A18 18 0 0 1 82 74H67.97a18.29 18.29 0 0 0-.67-6H82a16 16 0 0 0 15.54-19.8z" opacity=".2"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M83 74H67.97a18 18 0 0 1-35.94 0H22a22 22 0 0 1-3.14-43.78 27.01 27.01 0 0 1 49.99-5.89 15 15 0 0 1 18.08 16.13A17 17 0 0 1 83 74zm-15.03-2H83a15 15 0 0 0 1.63-29.91A13.03 13.03 0 0 0 72 26c-1.48 0-2.9.25-4.21.7a25 25 0 0 0-47.3 5.36A20 20 0 0 0 22 72h10.03a18 18 0 0 1 34.95-5H83a10 10 0 0 0 8.95-5.53l.9.45A11 11 0 0 1 83 68H67.3c.37 1.28.6 2.62.67 4zM66 73a16 16 0 1 0-32 0 16 16 0 0 0 32 0zM45 16v1a20 20 0 0 0-17.9 11.05l-.89-.44A21 21 0 0 1 45 16zm5 52a5.02 5.02 0 0 0-5 5c0 1.38.56 2.63 1.46 3.54l-.7.7-1.42 1.42-.7.7A9.06 9.06 0 0 1 41 73a9 9 0 0 1 9-9v-3l1 1 3.3 3.3.7.7-.7.7L51 70l-1 1v-3zm-6 5a6 6 0 0 1 6-6h1V68.59L53.59 66 51 63.41V65h-1a8 8 0 0 0-6.32 12.9l1.43-1.42A5.98 5.98 0 0 1 44 73zm11 0c0-1.38-.56-2.63-1.46-3.54l.7-.7 1.42-1.42.7-.7A9.06 9.06 0 0 1 59 73a9 9 0 0 1-9 9v3l-1-1-3.3-3.3-.7-.7.7-.7L49 76l1-1v3a5.02 5.02 0 0 0 5-5zm-6 5v-.59L46.41 80 49 82.59V81h1a8 8 0 0 0 6.32-12.9l-1.43 1.42A6 6 0 0 1 50 79h-.99v-1zm-13-5a14 14 0 0 1 14-14v1a13 13 0 0 0-12.13 17.69l-.9.42c-.63-1.58-.97-3.3-.97-5.11z"></path>
+									</svg>
+								{{ elseif icon == 'person' }}
+									<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
+										<path class="text-brand-400" fill="currentColor" d="M66.11 73.8L51 66.23V72a10 10 0 1 1-20 0v-5.76L7.27 78.1A8.65 8.65 0 0 0 3 85v13h72.24a17 17 0 0 1-9.13-24.2z"></path>
+										<path class="text-brand-100" fill="currentColor" d="M33 60.5V72a8 8 0 1 0 16 0V60.5A22 22 0 0 0 63 40V24a22 22 0 0 0-44 0v16a22 22 0 0 0 14 20.5z"></path>
+										<circle class="text-brand-300" cx="81" cy="82" r="17" fill="currentColor"></circle>
+										<polygon class="text-brand-50" fill="currentColor" points="79 80 79 73 83 73 83 80 90 80 90 84 83 84 83 91 79 91 79 84 72 84 72 80"></polygon>
+										<path class="text-brand-900" fill="currentColor" d="M31 61.82V64l-8.74 4.37A33.84 33.84 0 0 0 41 74c6.93 0 13.37-2.07 18.74-5.63L51 64v-2.18A23.91 23.91 0 0 1 41 64c-3.57 0-6.96-.78-10-2.18z" opacity=".2"></path>
+										<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M66.28 71.64A18 18 0 1 1 81 100H1V85c0-3.31 2.4-7.2 5.37-8.69L31 64v-2.18a24 24 0 0 1-14-21.81V23.99a24 24 0 0 1 48 0v16.02a24 24 0 0 1-14 21.82V64l15.28 7.64zM72.75 98c-.6-.31-1.19-.66-1.75-1.03V98h1.75zM70 96.25a17.97 17.97 0 0 1-4.79-22.9L51 66.23V72a10 10 0 1 1-20 0v-5.76L7.27 78.1A8.65 8.65 0 0 0 3 85v13h8v-6h1v6h58v-1.75zM33 62.63V72a8 8 0 1 0 16 0v-9.36a23.97 23.97 0 0 1-16 0zM19 24v16.02a22 22 0 0 0 44 0V23.99a22 22 0 0 0-44 0zm5.9-8.04A18 18 0 0 1 41 6v1a17 17 0 0 0-15.2 9.4l-.9-.45zM81 98a16 16 0 1 0 0-32 16 16 0 0 0 0 32zM67.96 87.11A14 14 0 0 1 81 68v1a13 13 0 0 0-12.13 17.69l-.9.42zM79 80v-7h4v7h7v4h-7v7h-4v-7h-7v-4h7zm1-6v7h-7v2h7v7h2v-7h7v-2h-7v-7h-2z"></path>
+									</svg>
+								{{ /if }}
+							</div>
 						</div>
+						<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">{{ title }}</p>
+						<div class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">{{ description | markdown }}</div>
 					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Minimal costs</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						Sitesauce hosts your static sites on <a href="https://vercel.com/home" target="_blank" class="hover:underline">Vercel</a> (formerly ZEIT), offering unlimited bandwidth and their world-class CDN for no additional cost.
-					</p>
-				</div>
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<polygon class="text-brand-400" fill="currentColor" points="71.719 42 62 42 59.046 42 53.8 42 52.323 42 52.871 40.629 68.323 2 31.64 2 20.44 58 42 58 44.44 58 43.961 60.392 39.613 82.133"></polygon>
-								<path class="text-brand-500" fill="currentColor" d="M59.45 41H53.8l.4-1L69.4 2h5.65l-14.9 37.26-.7 1.74zM39.19 84.27L73 42h4.84L37.57 92.33l1.62-8.06z"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M42 60H18l.2-1 .2-1L29.8 1l.2-1h48l-.8 2-14.4 36-.8 2H82l-1.6 2-43.68 54.6L34 100l.85-4.27L41.6 62l.4-2zm17.45-19l.7-1.74L75.04 2H69.4L54.2 40l-.4 1h5.65zm12.27 1H52.32l.55-1.37L68.32 2H31.64l-11.2 56h24l-.48 2.4-4.35 21.73L71.71 42zM39.19 84.27l-1.62 8.06L77.84 42H73L39.19 84.27zM35 6h12l-.2 1H35.82l-2.8 14H32l3-15zm-4 20h1.02l-2 10H29l2-10z"></path>
-							</svg>
-						</div>
-					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Blazing-fast load times</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						Executing expensive operations on build and serving your sites through Vercel's world-class CDN results in semi-instantaneous page loads.
-					</p>
-				</div>
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<path class="text-brand-400" fill="currentColor" d="M6 0a6 6 0 0 0-6 6v88a6 6 0 0 0 6 6h88a6 6 0 0 0 6-6V6a6 6 0 0 0-6-6H6z"></path>
-								<path class="text-brand-300" fill="currentColor" d="M24 11h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zM24 81h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm-61-5v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm70 48v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8z"></path>
-								<path class="text-brand-300" fill="currentColor" fill-rule="nonzero" d="M18 20c0-1.1.9-2 2-2h60a2 2 0 0 1 2 2v60a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V20z"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M6 0h88a6 6 0 0 1 6 6v88a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6zm88 2H6a4 4 0 0 0-4 4v88a4 4 0 0 0 4 4h88a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4zM6 4h88a2 2 0 0 1 2 2v88a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2zm88 1H6a1 1 0 0 0-1 1v88a1 1 0 0 0 1 1h88a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM71 82h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-2v4h-1v3h-4v-3h-1v-4h-3a2 2 0 0 1-2-2v-3h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-2h-4v-1h-3v-4h3v-1h4v-3c0-1.1.9-2 2-2h3v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h2v-4h1v-3h4v3h1v4h3a2 2 0 0 1 2 2v3h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v2h4v1h3v4h-3v1h-4v3a2 2 0 0 1-2 2h-3v4h-1v3h-4v-3h-1v-4zM20 20v60h60V20H20zm9 8h43v44H28V28h1zm42 1H29v42h42V29zm-40 2h38v38H31V31zm1 1v36h36V32H32zm-8-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm1-2a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm53 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM24 78a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm1-2a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm53 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-1 9h-2v2h2v-2zm-10 2h2v-2h-2v2zm-6-2h-2v2h2v-2zm-10 2h2v-2h-2v2zm-6-2h-2v2h2v-2zm-10 2h2v-2h-2v2zm-8-2v2h2v-2h-2zM12 73v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm74 50h2v-2h-2v2zm2-8v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-10v2h2v-2h-2zm2-6v-2h-2v2h2zm-2-8h2v-2h-2v2zM75 12h-2v2h2v-2zm-2 70v2h2v-2h-2zm-8 0v2h2v-2h-2zm-6 0h-2v2h2v-2zm-10 0v2h2v-2h-2zm-6 0h-2v2h2v-2zm-10 0v2h2v-2h-2zm-8 0v2h2v-2h-2zm-7-9h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm0-6v-2h-2v2h2zm0-10h-2v2h2v-2zm64 50h2v-2h-2v2zm0-8h2v-2h-2v2zm0-10v2h2v-2h-2zm0-6h2v-2h-2v2zm0-10v2h2v-2h-2zm0-6h2v-2h-2v2zm0-8h2v-2h-2v2zm-7-9v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2zm-10-4h2v-2h-2v2zm2 4v-2h-2v2h2z"></path>
-							</svg>
-						</div>
-					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Infinite scaling</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						With guaranteed zero-downtime and edge regions around the world, a thousand concurrent visits load as fast as a single one.
-					</p>
-				</div>
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<path class="text-brand-500" fill="currentColor" d="M50 2A85.6 85.6 0 0 0 8 12.94v47.05c0 10.26 7.7 22.22 17.04 26.47L50 97.8l24.96-11.34C84.3 82.2 92 70.26 92 59.99V12.94A85.6 85.6 0 0 0 50 2z"></path>
-								<path class="text-brand-100" fill="currentColor" d="M71.23 78.27C77.37 75.47 83 66.73 83 59.99V18.41A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4V60c0 6.73 5.64 15.48 11.77 18.27L50 87.92l21.23-9.65z"></path>
-								<path class="text-brand-400" fill="currentColor" d="M50 62a16 16 0 1 0 0-32 16 16 0 0 0 0 32z"></path>
-								<path class="text-brand-50" fill="currentColor" d="M56 44h3v10H41V44h3v-2a6 6 0 0 1 12 0v2zm-4 0v-2a2 2 0 1 0-4 0v2h4z"></path>
-								<path class="text-brand-900" fill="currentColor" d="M67.97 47a18 18 0 1 1-35.95 0 18 18 0 0 0 35.95 0zM12 15.4v-.08A81.62 81.62 0 0 1 50 6a81.62 81.62 0 0 1 38 9.32v.08l-2.97 1.78A78.5 78.5 0 0 0 50 9a78.5 78.5 0 0 0-35.03 8.18L12 15.4zm71 5.01v-2A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4v2.01A76.62 76.62 0 0 1 50 13c11.5 0 22.72 2.52 33 7.4v.01z" opacity=".2"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M94 60c0 11.04-8.15 23.7-18.21 28.28L50 100 24.21 88.28C14.15 83.7 6 71.04 6 59.99V11.77A87.6 87.6 0 0 1 50 0a87.6 87.6 0 0 1 44 11.77V60zM50 2A85.6 85.6 0 0 0 8 12.94v47.05c0 10.26 7.7 22.22 17.04 26.47L50 97.8l24.96-11.34C84.3 82.2 92 70.26 92 59.99V12.94A85.6 85.6 0 0 0 50 2zm0 4a81.62 81.62 0 0 1 38 9.32v44.67c0 8.7-6.77 19.23-14.7 22.83L50 93.4 26.7 82.8C18.78 79.22 12 68.7 12 60V15.32A81.62 81.62 0 0 1 50 6zM27.11 81.9L50 92.32l22.89-10.4C80.45 78.47 87 68.3 87 59.99V15.92A80.62 80.62 0 0 0 50 7a80.62 80.62 0 0 0-37 8.92V60c0 8.3 6.55 18.48 14.11 21.92zM15 60V17.14A78.64 78.64 0 0 1 50 9a78.64 78.64 0 0 1 35 8.15V60c0 7.53-6.09 16.98-12.94 20.1L50 90.1 27.94 80.1C21.09 76.98 15 67.5 15 59.99zm68 0V18.4A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4V60c0 6.73 5.64 15.48 11.77 18.27L50 87.92l21.23-9.65C77.37 75.47 83 66.73 83 59.99zm-33 4a18 18 0 1 1 0-36 18 18 0 0 1 0 36zm16-18a16 16 0 1 0-32 0 16 16 0 0 0 32 0zm-29.04 5.11A14 14 0 0 1 50 32v1a13 13 0 0 0-12.13 17.69l-.9.42zM56 44h3v10H41V44h3v-2a6 6 0 0 1 12 0v2zm-14 9h16v-6H42v6zm16-8H42v1h16v-1zm-3-1v-2a5 5 0 1 0-10 0v2h2v-2a3 3 0 0 1 6 0v2h2zm-3 0v-2a2 2 0 0 0-4 0v2h4z"></path>
-							</svg>
-						</div>
-					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Unbreakable Security</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						Without access to your backend, there's no way for anyone to steal sensitive data or deface your website.
-					</p>
-				</div>
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto" style="top: 16px;">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<path class="text-brand-100" fill="currentColor" d="M83 74a17 17 0 0 0 3.93-33.54 15 15 0 0 0-18.08-16.13 27 27 0 0 0-50 5.9A22 22 0 0 0 22 74h61z"></path>
-								<circle class="text-brand-400" cx="50" cy="73" r="18" fill="currentColor"></circle>
-								<path class="text-red-50" fill="currentColor" d="M50 68a5.02 5.02 0 0 0-5 5c0 1.38.56 2.63 1.46 3.54l-.7.7-1.42 1.42-.7.7A9.06 9.06 0 0 1 41 73a9 9 0 0 1 9-9v-3l1 1 3.3 3.3.7.7-.7.7L51 70l-1 1v-3zm5 5c0-1.38-.56-2.63-1.46-3.54l.7-.7 1.42-1.42.7-.7A9.06 9.06 0 0 1 59 73a9 9 0 0 1-9 9v3l-1-1-3.3-3.3-.7-.7.7-.7L49 76l1-1v3a5.02 5.02 0 0 0 5-5z"></path>
-								<path class="text-brand-900" fill="currentColor" d="M32.7 68a18 18 0 0 0-.67 6H22A22 22 0 0 1 .83 46H2.1A20 20 0 0 0 22 68h10.7zm64.84-19.8a16.91 16.91 0 0 1 2.45 8.3A18 18 0 0 1 82 74H67.97a18.29 18.29 0 0 0-.67-6H82a16 16 0 0 0 15.54-19.8z" opacity=".2"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M83 74H67.97a18 18 0 0 1-35.94 0H22a22 22 0 0 1-3.14-43.78 27.01 27.01 0 0 1 49.99-5.89 15 15 0 0 1 18.08 16.13A17 17 0 0 1 83 74zm-15.03-2H83a15 15 0 0 0 1.63-29.91A13.03 13.03 0 0 0 72 26c-1.48 0-2.9.25-4.21.7a25 25 0 0 0-47.3 5.36A20 20 0 0 0 22 72h10.03a18 18 0 0 1 34.95-5H83a10 10 0 0 0 8.95-5.53l.9.45A11 11 0 0 1 83 68H67.3c.37 1.28.6 2.62.67 4zM66 73a16 16 0 1 0-32 0 16 16 0 0 0 32 0zM45 16v1a20 20 0 0 0-17.9 11.05l-.89-.44A21 21 0 0 1 45 16zm5 52a5.02 5.02 0 0 0-5 5c0 1.38.56 2.63 1.46 3.54l-.7.7-1.42 1.42-.7.7A9.06 9.06 0 0 1 41 73a9 9 0 0 1 9-9v-3l1 1 3.3 3.3.7.7-.7.7L51 70l-1 1v-3zm-6 5a6 6 0 0 1 6-6h1V68.59L53.59 66 51 63.41V65h-1a8 8 0 0 0-6.32 12.9l1.43-1.42A5.98 5.98 0 0 1 44 73zm11 0c0-1.38-.56-2.63-1.46-3.54l.7-.7 1.42-1.42.7-.7A9.06 9.06 0 0 1 59 73a9 9 0 0 1-9 9v3l-1-1-3.3-3.3-.7-.7.7-.7L49 76l1-1v3a5.02 5.02 0 0 0 5-5zm-6 5v-.59L46.41 80 49 82.59V81h1a8 8 0 0 0 6.32-12.9l-1.43 1.42A6 6 0 0 1 50 79h-.99v-1zm-13-5a14 14 0 0 1 14-14v1a13 13 0 0 0-12.13 17.69l-.9.42c-.63-1.58-.97-3.3-.97-5.11z"></path>
-							</svg>
-						</div>
-					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Always Updated</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						New changes made on your content will automatically trigger new builds and be reflected on the static site.
-					</p>
-				</div>
-				<div>
-					<div class="relative min-h-feature">
-						<div class="relative w-20 mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="absolute w-20">
-								<path class="text-brand-400" fill="currentColor" d="M66.11 73.8L51 66.23V72a10 10 0 1 1-20 0v-5.76L7.27 78.1A8.65 8.65 0 0 0 3 85v13h72.24a17 17 0 0 1-9.13-24.2z"></path>
-								<path class="text-brand-100" fill="currentColor" d="M33 60.5V72a8 8 0 1 0 16 0V60.5A22 22 0 0 0 63 40V24a22 22 0 0 0-44 0v16a22 22 0 0 0 14 20.5z"></path>
-								<circle class="text-brand-300" cx="81" cy="82" r="17" fill="currentColor"></circle>
-								<polygon class="text-brand-50" fill="currentColor" points="79 80 79 73 83 73 83 80 90 80 90 84 83 84 83 91 79 91 79 84 72 84 72 80"></polygon>
-								<path class="text-brand-900" fill="currentColor" d="M31 61.82V64l-8.74 4.37A33.84 33.84 0 0 0 41 74c6.93 0 13.37-2.07 18.74-5.63L51 64v-2.18A23.91 23.91 0 0 1 41 64c-3.57 0-6.96-.78-10-2.18z" opacity=".2"></path>
-								<path class="text-brand-900" fill="currentColor" fill-rule="nonzero" d="M66.28 71.64A18 18 0 1 1 81 100H1V85c0-3.31 2.4-7.2 5.37-8.69L31 64v-2.18a24 24 0 0 1-14-21.81V23.99a24 24 0 0 1 48 0v16.02a24 24 0 0 1-14 21.82V64l15.28 7.64zM72.75 98c-.6-.31-1.19-.66-1.75-1.03V98h1.75zM70 96.25a17.97 17.97 0 0 1-4.79-22.9L51 66.23V72a10 10 0 1 1-20 0v-5.76L7.27 78.1A8.65 8.65 0 0 0 3 85v13h8v-6h1v6h58v-1.75zM33 62.63V72a8 8 0 1 0 16 0v-9.36a23.97 23.97 0 0 1-16 0zM19 24v16.02a22 22 0 0 0 44 0V23.99a22 22 0 0 0-44 0zm5.9-8.04A18 18 0 0 1 41 6v1a17 17 0 0 0-15.2 9.4l-.9-.45zM81 98a16 16 0 1 0 0-32 16 16 0 0 0 0 32zM67.96 87.11A14 14 0 0 1 81 68v1a13 13 0 0 0-12.13 17.69l-.9.42zM79 80v-7h4v7h7v4h-7v7h-4v-7h-7v-4h7zm1-6v7h-7v2h7v7h2v-7h7v-2h-7v-7h-2z"></path>
-							</svg>
-						</div>
-					</div>
-					<p class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center">Built for teams</p>
-					<p class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-left mb-4 text-center max-w-none">
-						Forget about password sharing! Your sites can be shared with your whole team for no additional cost.
-					</p>
-				</div>
+				{{ /features }}
 			</div>
-			<a href="#pricing-focus" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">See pricing</a>
+			<a href="#pricing-focus" class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">{{ features_cta }}</a>
 		</div>
 		<img src="/img/background/line.svg" alt="" class="image-33 _3" />
 	</div>
@@ -150,56 +107,32 @@
 		<div class="container">
 			<h1 class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">How does it work?</h1>
 			<div class="mt-10 flex flex-col-reverse lg:flex-row items-center justify-between">
-				<div
-					class="lg:mr-10 w-full lg:w-auto flex flex-col justify-center relative px-4 md:px-12 py-8 bg-white rounded-lg shadow-brand z-1">
-					<p class="font-brown mb-0 text-3xl leading-9 text-left text-brand-400">&quot;</p>
-					<p class="mb-8 text-black lg:max-w-xl text-left font-brown text-2xl md:text-3xl leading-normal">
-						It took us less than a minute to launch a static version of our WordPress website.
-						Everything just worked as you'd expect it to!</p>
-					<div class="text-left inline-flex items-center">
-						<img src="/img/avatars/peter.jpeg" width="40" alt="Peter Suhm" class="mr-3 rounded-full" />
-						<p class="text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed">
-							Peter Suhm, Founder of <a href="https://branchci.com/?ref=sitesauce" target="_blank" style="color: #5352bb;">Branch</a>
-						</p>
+				{{ steps_testimonial }}
+					<div class="lg:mr-10 w-full lg:w-auto flex flex-col justify-center relative px-4 md:px-12 py-8 bg-white rounded-lg shadow-brand z-1">
+						<p class="font-brown mb-0 text-3xl leading-9 text-left text-brand-400">&quot;</p>
+						<div class="mb-8 text-black lg:max-w-xl text-left font-brown text-2xl md:text-3xl leading-normal">{{ content | markdown }}</div>
+						<div class="text-left inline-flex items-center">
+							<img src="{{ avatar }}" width="40" alt="{{ user }}" class="mr-3 rounded-full" />
+							<p class="text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed">
+								{{ user }}, Founder of <a href="{{ company_url }}" target="_blank" style="color: {{ company_color }};">{{ company }}</a>
+							</p>
+						</div>
 					</div>
-				</div>
+				{{ /steps_testimonial }}
 				<div class="z-20 flex flex-col md:flex-row lg:flex-col items-stretch mt-12 lg:mt-0 md:mb-16 lg:mb-0">
-					<div class="mb-24 md:mb-0 lg:mb-16">
-						<div
-							class="flex flex-col h-full lg:h-auto lg:flex-row items-center lg:justify-between shadow-brand px-4 py-2 bg-brand-50 border-l-2 border-t-2 border-brand-100">
-							<span
-								class="text-6xl text-brand-900 font-jetbrains leading-12 -mt-12 bg-brand-50 border-2 border-brand-100 px-2 py-1 shadow-brand">01</span>
+					{{ steps }}
+					<div class="mb-24 md:mb-0 {{ if count < 3 }}lg:mb-16{{ /if }}">
+						<div class="flex flex-col h-full lg:h-auto lg:flex-row items-center lg:justify-between shadow-brand px-4 py-2 bg-brand-50 border-l-2 border-t-2 border-brand-100">
+							<span class="text-6xl text-brand-900 font-jetbrains leading-12 -mt-12 bg-brand-50 border-2 border-brand-100 px-2 py-1 shadow-brand">0{{ count }}</span>
 							<div class="text-center lg:text-left lg:pl-6 mt-6 lg:mt-0 px-2">
-								<p class="inline-block text-brand-900 text-lg font-spoof font-medium mb-1">Create a site</p>
-								<p class="block text-brand-800 font-ttnorms text-lg leading-relaxed lg:max-w-sm my-0 text-left overflow-visible text-center lg:text-left">
-									You give us a link to your website. <span class="text-brand-600 font-medium italic">It's that simple</span>.
-								</p>
+								<p class="inline-block text-brand-900 text-lg font-spoof font-medium mb-1">{{ title }}</p>
+								<div class="block text-brand-800 font-ttnorms text-lg leading-relaxed lg:max-w-sm my-0 text-left overflow-visible text-center lg:text-left">
+									{{ description | markdown }}
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="mb-24 md:mb-0 lg:mb-16">
-						<div
-							class="flex flex-col h-full lg:h-auto lg:flex-row items-center lg:justify-between shadow-brand px-4 py-2 bg-brand-50 border-l-2 border-t-2 border-brand-100">
-							<span class="text-6xl text-brand-900 font-jetbrains leading-12 -mt-12 bg-brand-50 border-2 border-brand-100 px-2 py-1 shadow-brand">02</span>
-							<div class="text-center lg:text-left lg:pl-6 mt-6 lg:mt-0">
-								<p class="inline-block text-brand-900 text-lg font-spoof font-medium mb-1">We deploy your site</p>
-								<p class="block text-brand-800 font-ttnorms text-lg leading-relaxed lg:max-w-sm my-0 text-left overflow-visible text-center lg:text-left">
-									We trigger the first deployment, which generates your static site and deploys it to Vercel.</p>
-							</div>
-						</div>
-					</div>
-					<div class="mb-24 md:mb-0">
-						<div
-							class="flex flex-col h-full lg:h-auto lg:flex-row items-center lg:justify-between shadow-brand px-4 py-2 bg-brand-50 border-l-2 border-t-2 border-brand-100">
-							<span
-								class="text-6xl text-brand-900 font-jetbrains leading-12 -mt-12 bg-brand-50 border-2 border-brand-100 px-2 py-1 shadow-brand">03</span>
-							<div class="text-center lg:text-left lg:pl-6 mt-6 lg:mt-0">
-								<p class="inline-block text-brand-900 text-lg font-spoof font-medium mb-1">We keep your content updated</p>
-								<p class="block text-brand-800 font-ttnorms text-lg leading-relaxed lg:max-w-sm my-0 text-left overflow-visible text-center lg:text-left">
-									When your content changes we trigger a new deployment, which updates your static site.</p>
-							</div>
-						</div>
-					</div>
+					{{ /steps }}
 				</div>
 			</div>
 		</div>
@@ -333,54 +266,16 @@
 							<div class="flex-1 border-t-2 border-gray-200"></div>
 						</div>
 						<ul class="pl-0 mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
-							<li class="flex items-start lg:col-span-1">
+							{{ pricing_features }}
+							<li class="flex items-start lg:col-span-1 {{ if index != 0 }}mt-5 lg:mt-0{{ /if }}">
 								<div class="flex-shrink-0">
 									<svg class="h-5 w-5 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd"
-											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd" />
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
 									</svg>
 								</div>
-								<p class="ml-3 text-lg leading-5 text-gray-700 font-ttnorms text-left">
-									Unlimited Sites
-								</p>
+								<p class="ml-3 text-lg leading-5 text-gray-700 font-ttnorms text-left">{{ name }}</p>
 							</li>
-							<li class="mt-5 flex items-start lg:col-span-1 lg:mt-0">
-								<div class="flex-shrink-0">
-									<svg class="h-5 w-5 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd"
-											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd" />
-									</svg>
-								</div>
-								<p class="ml-3 text-lg leading-5 text-gray-700 font-ttnorms text-left">
-									Deploy your sites to Vercel (formerly ZEIT)
-								</p>
-							</li>
-							<li class="mt-5 flex items-start lg:col-span-1 lg:mt-0">
-								<div class="flex-shrink-0">
-									<svg class="h-5 w-5 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd"
-											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd" />
-									</svg>
-								</div>
-								<p class="ml-3 text-lg leading-5 text-gray-700 font-ttnorms text-left">
-									Unlimited deployments
-								</p>
-							</li>
-							<li class="mt-5 flex items-start lg:col-span-1 lg:mt-0">
-								<div class="flex-shrink-0">
-									<svg class="h-5 w-5 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
-										<path fill-rule="evenodd"
-											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd" />
-									</svg>
-								</div>
-								<p class="ml-3 text-lg leading-5 text-gray-700 font-ttnorms text-left">
-									Official integrations for popular CMSs
-								</p>
-							</li>
+							{{ /pricing_features }}
 						</ul>
 					</div>
 				</div>
@@ -459,116 +354,18 @@
 			</h2>
 			<div class="mt-8 border-t-2 border-gray-200 pt-6">
 				<dl>
-					<div class="md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							Does Sitesauce replace regular hosting?<br>
-							Can I run Sitesauce from my development or staging environment?<br>
-							Do I need to expose my backend to the internet to use Sitesauce?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								While it's recommended to keep an instance of your backend running somewhere (like a
-								subdomain), as it allows you to continue using your dashboard regularly, you can
-								deploy locally-running sites to Sitesauce using <a href="https://sitesauce.app/guides/cli"
-									class="border-b border-gray-500 hover:text-brand-400 hover:border-brand-400"
-									target="_blank">our CLI</a>!
-								<br><br>
-								This means you could have a WordPress blog on your computer, run it locally to edit
-								some content then push it to production via Sitesauce without needing to host the
-								backend anywhere.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							How does Sitesauce detect when my content changes?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								Sitesauce provides official plugins for many content managing platforms (like
-								WordPress, Ghost or Joomla!) that automatically detect when your content changes. We
-								also provide extensive documentation on how to integrate Sitesauce with any other
-								platform, either via our API or using webhooks.
-								<br><br>
-								If your platform can't be integrated with Sitesauce through any of these options,
-								Sitesauce also provides an option to trigger new deployments periodically.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							How is using Sitesauce better than building a static site from scratch?<br>
-							How is using Sitesauce better than using a Headless CMS?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								If you have an existing website, migrating your theme, plugins and content can be a
-								hard task. You'd also lose the simplicity of having an admin panel and allowing
-								multiple users to work on your content together.
-								<br><br>
-								Part of this problem could be solved by having your static site pull data from your
-								backend on build, but this brings up other problems, like having to manage two
-								different codebases for a single website, migrating your themes over or needing to deploy to preview your
-								content.
-								<br><br>
-								Sitesauce takes care of all this for you. After signing up and entering a URL, we'll
-								generate a production-ready static version of your website and deploy it. You keep
-								your dashboard and remove unnecesary complexity.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							Will my contact forms work on my static site?<br>
-							Will comment sections work work on my static site?<br>
-							Will parts of the site that fetch data from the backend work on my static site?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								Sitesauce recommends the use of JAMstack-friendly alternatives to this services. For
-								example, you could move your contact forms to <a href="https://statickit.com/"
-									class="border-b border-gray-500 hover:text-brand-400 hover:border-brand-400"
-									target="_blank">StaticKit</a> or your comments to <a href="https://commento.io/"
-									class="border-b border-gray-500 hover:text-brand-400 hover:border-brand-400"
-									target="_blank">Commento</a>.
-								<br><br>
-								However, there are times where the only option is to rely on your backend. For this,
-								you can configure Sitesauce to <a href="https://sitesauce.app/guides/proxying-and-redirects">proxy certain endpoints to your backend</a>. You can also
-								use this if you need to fetch some data from your backend via AJAX.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							Is Sitesauce production-ready?<br>
-							Are any sites currently using Sitesauce on production?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								Yes! More than {{ open:sites }} sites have been deployed using Sitesauce to date. The website you're looking at right now was generated by Sitesauce from a Statamic site. Other examples include <a href="https://branchci.com" class="border-b border-gray-500 hover:text-brand-400 hover:border-brand-400 hover:text-brand-400 hover:border-brand-400" target="_blank">the Branch website</a> (using WordPress as backend) and <a href="https://miguelpiedrafita.com" class="border-b border-gray-500 link-mp" target="_blank">Miguel Piedrafita's personal website</a> (using Ghost as backend) alongside many others.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							Who built Sitesauce?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								👋 Hi! I'm <a class="border-b border-gray-500 link-mp" href="https://miguelpiedrafita.com" target="_blank">Miguel Piedrafita</a>, an 18-year-old maker. You can learn more about me <a href="https://miguelpiedrafita.com" class="border-b border-gray-500 link-mp" target="_blank">on my website</a> or <a href="https://twitter.com/m1guelpf" class="border-b border-gray-500 link-mp" target="_blank">on Twitter</a>, where I regularly share Sitesauce updates.
-							</p>
-						</dd>
-					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
-						<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
-							Did we miss your question?
-						</dt>
-						<dd class="mt-2 md:mt-0 md:col-span-7">
-							<p class="font-ttnorms leading-8 text-gray-500 text-lg">
-								If you have a question that isn't answered here, feel free to <a href="mailto:info+faq@sitesauce.app?subject=Question%20about%20Sitesauce" class="border-b border-gray-500 hover:text-brand-400 hover:border-brand-400">reach out</a>. We'll do our best to get back to you as soon as possible with a helpful answer.
-							</p>
-						</dd>
-					</div>
+					{{ questions }}
+						<div class="md:grid md:grid-cols-12 md:gap-8{{ if index != 0 }} mt-8 border-t border-gray-200 pt-6{{ /if }}">
+							<dt class="font-spoof text-base leading-8 font-medium text-gray-900 md:col-span-5">
+								{{ question | markdown }}
+							</dt>
+							<dd class="mt-2 md:mt-0 md:col-span-7">
+								<div class="font-ttnorms leading-8 text-gray-500 text-lg faq">
+									{{ answer | markdown }}
+								</div>
+							</dd>
+						</div>
+					{{ /questions }}
 				</dl>
 			</div>
 		</div>
