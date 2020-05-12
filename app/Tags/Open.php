@@ -3,6 +3,7 @@
 namespace App\Tags;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Http;
 use Statamic\Tags\Tags;
 use Zttp\Zttp;
 
@@ -12,49 +13,49 @@ class Open extends Tags
     /**
      * The {{ open:mrr }} tag
      */
-    public function mrr() : int
+    public function mrr($format = true) : string
     {
-        return $this->getStripeData()['mrr'];
+        return $this->formatCurrency($this->getBaremetricsData()['mrr'] / 100, $format);
     }
 
     /**
      * The {{ open:arr }} tag
      */
-    public function arr() : int
+    public function arr($format = true) : string
     {
-        return $this->mrr() * 12;
+        return $this->formatCurrency($this->getBaremetricsData()['arr'] / 100, $format);
     }
 
     /**
      * The {{ open:costs }} tag
      */
-    public function costs() : string
+    public function costs($format = true) : string
     {
-        return number_format(40.5 - ((float) $this->vaporCost()), 2);
+        return $this->formatCurrency(40.5 - $this->vaporCost(false), $format);
     }
 
     /**
      * The {{ open:aprofit }} tag
      */
-    public function acosts() : string
+    public function acosts($format = true) : string
     {
-        return ((float) $this->costs()) * 12;
+        return $this->formatCurrency($this->costs(false) * 12, $format);
     }
 
     /**
      * The {{ open:profit }} tag
      */
-    public function profit() : int
+    public function profit($format = true) : string
     {
-        return $this->mrr() - $this->costs();
+        return $this->formatCurrency($this->mrr(false) - $this->costs(false), $format);
     }
 
     /**
      * The {{ open:aprofit }} tag
      */
-    public function aprofit() : int
+    public function aprofit($format = true) : string
     {
-        return $this->profit() * 12;
+        return $this->formatCurrency($this->arr(false) - $this->acosts(false), $format);
     }
 
     /**
@@ -62,7 +63,7 @@ class Open extends Tags
      */
     public function customers() : int
     {
-        return $this->getStripeData()['customers'];
+        return $this->getBaremetricsData()['active_subscriptions'];
     }
 
     /**
@@ -70,7 +71,7 @@ class Open extends Tags
      */
     public function trials() : int
     {
-        return $this->getStripeData()['trials'];
+        return $this->getBaremetricsData()['active_trials'];
     }
 
     /**
@@ -146,18 +147,23 @@ class Open extends Tags
     /**
      * The {{ open:vaporCost }} tag
      */
-    public function vaporCost() : string
+    public function vaporCost($format = true) : string
     {
-        return number_format($this->getVaporData()['estimatedCost'], 2);
+        return $this->formatCurrency($this->getVaporData()['estimatedCost'], $format);
     }
     
-    protected function getStripeData() : array
+    protected function formatCurrency(float $amount, bool $shouldFormat)
+    {
+        return $shouldFormat ? number_format($amount, floor($amount) == $amount ? '0':'2') : $amount;
+    }
+    
+    protected function getBaremetricsData() : array
     {
         if (! app()->isProduction()) {
-            return json_decode(file_get_contents(storage_path('app/stubs/stripe.json')), true);
+            return json_decode(file_get_contents(storage_path('app/stubs/baremetrics.json')), true);
         }
 
-        return blink('stripe', fn () => Zttp::get('https://sitesauce-revenue.now.sh/api')->json());
+        return blink('baremetrics', fn () => Http::withToken(config('services.baremetrics.token'))->get(sprintf('https://api.baremetrics.com/v1/metrics?start_date=%s&end_date=%s', now()->toDateString(), now()->toDateString()))->json()['metrics'][0]);
     }
 
     protected function getFathomData() : array
@@ -166,7 +172,7 @@ class Open extends Tags
             return json_decode(file_get_contents(storage_path('app/stubs/fathom.json')), true);
         }
 
-        return blink('fathom', fn () => Zttp::get('https://app.usefathom.com/sites/1025/charts?from='.urlencode(Carbon::today()->addMonths(-1)->toDateTimeString()).'&to='.urlencode(Carbon::today()->toDateTimeString()).'&tz=Europe/Madrid')->json());
+        return blink('fathom', fn () => Http::get('https://app.usefathom.com/sites/1025/charts?from='.urlencode(Carbon::today()->addMonths(-1)->toDateTimeString()).'&to='.urlencode(Carbon::today()->toDateTimeString()).'&tz=Europe/Madrid')->json());
     }
 
     protected function getSitesauceData() : array
@@ -175,7 +181,7 @@ class Open extends Tags
             return json_decode(file_get_contents(storage_path('app/stubs/sitesauce.json')), true);
         }
 
-        return blink('sitesauce', fn () => Zttp::get('https://app.sitesauce.app/api/meta')->json());
+        return blink('sitesauce', fn () => Http::get('https://app.sitesauce.app/api/meta')->json());
     }
 
     protected function getVaporData() : array
@@ -184,6 +190,6 @@ class Open extends Tags
             return json_decode(file_get_contents(storage_path('app/stubs/vapor.json')), true);
         }
 
-        return blink('vapor', fn () => Zttp::withHeaders(['Authorization' => 'Bearer '.config('services.vapor.token')])->get('https://vapor.laravel.com/api/projects/8900/environments/production/metrics?period=1M')->json());
+        return blink('vapor', fn () => Http::withToken(config('services.vapor.token'))->get('https://vapor.laravel.com/api/projects/8900/environments/production/metrics?period=1M')->json());
     }
 }
