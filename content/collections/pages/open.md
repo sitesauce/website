@@ -1,7 +1,7 @@
 ---
 title: Open
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
-updated_at: 1588464223
+updated_at: 1589281643
 hide_date: true
 meta_image: 'https://brand-assets.sitesauce.app/open-card.jpg'
 meta_description: 'Sitesauce is an open startup! Explore our revenue, costs, and metrics on our open page.'
@@ -53,7 +53,7 @@ content:
             content:
               -
                 type: text
-                text: "At any given time, you can calculate MRR by summing the monthly-normalized amounts of\_"
+                text: "MRR is calculated by summing the monthly-normalized amounts of\_"
               -
                 type: text
                 marks:
@@ -62,20 +62,20 @@ content:
                 text: 'all active subscriptions'
               -
                 type: text
-                text: "\_at that time. For example, an annual subscription for $1,200 only counts $100 towards your MRR. Things get more complicated once you consider discounts, tax, trials, delinquency, cancellations, and metered billing. The reason we've chosen active subscriptions (rather than summing your invoices, for instance) is that MRR is a forward-looking metric that is distinct from the immediate cash flow you're about to receive (source\_"
+                text: "\_at that time. For example, an annual subscription for $1,200 only counts $100 towards your MRR. All our revenue metrics are calculated by "
               -
                 type: text
                 marks:
                   -
                     type: link
                     attrs:
-                      href: 'https://support.stripe.com/questions/billing-analytics#how-do-you-calculate-mrr'
+                      href: 'https://i.m1guelpf.me/baremetrics'
                       target: _blank
                       rel: null
-                text: Stripe
+                text: Baremetrics
               -
                 type: text
-                text: ).
+                text: .
   -
     type: heading
     attrs:
@@ -199,8 +199,6 @@ content:
               -
                 type: text
                 text: 'The estimate shown here is calculated by subtracting the costs from the revenue. '
-  -
-    type: paragraph
   -
     type: heading
     attrs:
