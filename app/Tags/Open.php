@@ -163,7 +163,7 @@ class Open extends Tags
             return json_decode(file_get_contents(storage_path('app/stubs/baremetrics.json')), true);
         }
 
-        return blink('baremetrics', fn () => Http::withToken(config('services.baremetrics.token'))->get(sprintf('https://api.baremetrics.com/v1/metrics?start_date=%s&end_date=%s', now()->toDateString(), now()->toDateString()))->json()['metrics'][0]);
+        return blink('baremetrics', fn () => collect(Http::withToken(config('services.baremetrics.token'))->get(sprintf('https://api.baremetrics.com/v1/metrics?start_date=%s&end_date=%s', now()->yesterday()->toDateString(), now()->toDateString()))->json()['metrics'])->first(fn ($metric) => $metric['mrr'] != 0));
     }
 
     protected function getFathomData() : array
