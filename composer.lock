@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1b3a2cecbb87207f77a393a64f6a406",
+    "content-hash": "222b540be0f2dd0c9b81084ad4416071",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2007,6 +2007,66 @@
                 "processing"
             ],
             "time": "2019-04-03T23:46:42+00:00"
+        },
+        {
+            "name": "m1guelpf/laravel-fun",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/m1guelpf/laravel-fun.git",
+                "reference": "95422386619671e33255a159a2faf82fbca8ae1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/m1guelpf/laravel-fun/zipball/95422386619671e33255a159a2faf82fbca8ae1c",
+                "reference": "95422386619671e33255a159a2faf82fbca8ae1c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "7.*",
+                "illuminate/routing": "7.*",
+                "illuminate/support": "7.*",
+                "php": "^7.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "M1guelpf\\Fun\\FunServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "M1guelpf\\Fun\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miguel Piedrafita",
+                    "email": "soy@miguelpiedrafita.com",
+                    "homepage": "https://miguelpiedrafita.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": ":package_description",
+            "homepage": "https://github.com/m1guelpf/laravel-fun",
+            "keywords": [
+                "laravel",
+                "laravel-fun",
+                "m1guelpf"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/m1guelpf",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-05-14T23:11:52+00:00"
         },
         {
             "name": "marcusschwarz/lesserphp",

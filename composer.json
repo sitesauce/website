@@ -11,6 +11,7 @@
         "kitetail/zttp": "^0.6.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
+        "m1guelpf/laravel-fun": "^1.0",
         "spatie/laravel-blink": "^1.4",
         "spatie/laravel-sitemap": "^5.7",
         "statamic/cms": "3.0.*@beta"
