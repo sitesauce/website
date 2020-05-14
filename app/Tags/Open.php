@@ -31,7 +31,7 @@ class Open extends Tags
      */
     public function costs($format = true) : string
     {
-        return $this->formatCurrency(40.5 - $this->vaporCost(false), $format);
+        return $this->formatCurrency(65.5 + $this->vaporCost(false), $format);
     }
 
     /**

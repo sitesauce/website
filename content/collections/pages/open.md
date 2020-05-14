@@ -1,7 +1,7 @@
 ---
 title: Open
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
-updated_at: 1589281643
+updated_at: 1589459627
 hide_date: true
 meta_image: 'https://brand-assets.sitesauce.app/open-card.jpg'
 meta_description: 'Sitesauce is an open startup! Explore our revenue, costs, and metrics on our open page.'
@@ -164,6 +164,34 @@ content:
               -
                 type: text
                 text: 'All our infrastructure, from servers to email, runs on Amazon Web Services. The above cost is an estimate calculated by Laravel Vapor for the last 30 days.'
+  -
+    type: set
+    attrs:
+      values:
+        type: details
+        title: 'Baremetrics Recover $25'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We use '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://i.m1guelpf.me/baremetrics'
+                      target: _blank
+                      rel: null
+                text: Baremetrics
+              -
+                type: text
+                text: ' Recover to automatically contact customers when their payments don''t go through and get them to update their credit cards'
+  -
+    type: paragraph
   -
     type: heading
     attrs:
