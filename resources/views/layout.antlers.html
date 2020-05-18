@@ -33,6 +33,36 @@
 				</div>
 			</div>
 		</footer>
+		<div x-data="{ ...affiliate() }" x-cloak x-init="init()">
+			<template x-if="affiliate">
+				<div x-transition:enter="ease-out duration-500" x-transition:enter-start="opacity-0 scale-95 translate-y-2" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 translate-y-2" class="transition transform fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 z-100">
+					<div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
+						<div class="p-2 rounded-lg bg-brand-600 shadow-lg sm:p-3">
+							<div class="flex items-center justify-between flex-wrap">
+								<div class="flex-1 flex items-center">
+									<img :src="affiliate.avatar" class="h-8 w-8 rounded-full mr-2">
+									<p class="font-medium text-white font-ttnorms">
+										<span class="md:hidden">
+											<span x-text="affiliate.name"></span> invited you to Sitesauce!
+										</span>
+										<span class="hidden md:inline font-spoof">
+											Your friend <span x-text="affiliate.name"></span> has invited you to try Sitesauce.
+										</span>
+									</p>
+								</div>
+								<div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+									<div class="rounded-md shadow-sm">
+										<a href="https://app.sitesauce.app/register" class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-brand-600 bg-white hover:text-brand-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 font-ttnorms">
+											Start your trial
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</template>
+		</div>
 		<script src="{{ mix src='/js/app.js' }}"></script>
 		{{ if environment === 'production' }}
 			<script src="https://viper.sitesauce.app/script.js" site="ATRFRDDR" included-domains="sitesauce.app" defer></script>
