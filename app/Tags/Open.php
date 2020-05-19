@@ -5,7 +5,6 @@ namespace App\Tags;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
 use Statamic\Tags\Tags;
-use Zttp\Zttp;
 
 class Open extends Tags
 {
@@ -15,7 +14,7 @@ class Open extends Tags
      */
     public function mrr($format = true) : string
     {
-        return $this->formatCurrency($this->getBaremetricsData()['mrr'] / 100, $format);
+        return $this->formatCurrency($this->getRevenue()['mrr'], $format);
     }
 
     /**
@@ -23,7 +22,7 @@ class Open extends Tags
      */
     public function arr($format = true) : string
     {
-        return $this->formatCurrency($this->getBaremetricsData()['arr'] / 100, $format);
+        return $this->formatCurrency($this->mrr(false) * 12, $format);
     }
 
     /**
@@ -157,6 +156,15 @@ class Open extends Tags
         return $shouldFormat ? number_format($amount, floor($amount) == $amount ? '0':'2') : $amount;
     }
     
+    protected function getRevenue() : array
+    {
+        if (! app()->isProduction()) {
+            return json_decode(file_get_contents(storage_path('app/stubs/revenue.json')), true);
+        }
+        
+        return blink('revenue', fn () => Http::get('https://sitesauce-revenue.now.sh/api')->json());
+    }
+
     protected function getBaremetricsData() : array
     {
         if (! app()->isProduction()) {
