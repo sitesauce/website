@@ -23,7 +23,7 @@ class Landing extends ViewModel
     protected function getFeatures(): array
     {
         return [
-            'features_title' => 'What\'s in for me?',
+            'features_title' => 'What\'s in it for me?',
             'features_description' => 'Enjoy all the benefits static sites provide while keeping everything good about the backend.',
             'features_cta' => 'See pricing',
             'features' => [[

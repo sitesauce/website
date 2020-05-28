@@ -3,7 +3,7 @@ title: 'Generate a static site from your WordPress website in one click'
 header_description: 'Sitesauce instantly converts your WordPress website into a static site, and keeps your content in sync.'
 header_cta: 'Start your 7-day trial'
 updated_by: 1f409eaa-ea1e-4e63-bf11-8d43677e5069
-updated_at: 1588765323
+updated_at: 1590661813
 meta_title: 'Generate a static site from your WordPress website in one click'
 meta_description: 'Sitesauce automatically generates a static site for your WordPress site, and keeps your content in sync.'
 header_title: 'Generate a static site from your WordPress website in one click'
@@ -33,7 +33,7 @@ features:
     description: 'Forget about password sharing! Your sites can be shared with your whole team for no additional cost.'
     icon: person
 features_cta: 'See pricing'
-features_title: 'What''s in for me?'
+features_title: 'What''s in it for me?'
 features_description: 'Enjoy all the benefits static sites provide while keeping the ease of editing WordPress gives you.'
 steps_testimonial:
   -
