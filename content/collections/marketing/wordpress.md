@@ -84,7 +84,7 @@ questions:
     answer: |
       If you have an existing website, migrating your theme, plugins and content can be a hard task. You'd also lose the simplicity of having an admin panel and allowing multiple users to work on your content together.<br>
       Part of this problem could be solved by having your static site pull data from WordPress on build, but this brings up other problems, like having to manage two different codebases for a single website, migrating your themes over or needing to deploy to preview your content.<br>
-      Sitesauce takes care of all this for you. After signing up and entering a URL, we'll generate a production-ready static version of your website and deploy it. You keep your dashboard and remove unnecesary complexity.
+      Sitesauce takes care of all this for you. After signing up and entering a URL, we'll generate a production-ready static version of your website and deploy it. You keep your dashboard and remove unnecessary complexity.
   -
     question: |
       Will my contact forms work on my static site?
