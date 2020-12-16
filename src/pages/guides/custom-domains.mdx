@@ -1,0 +1,23 @@
+import Page from '../../components/Page'
+import Alert from '../../components/Alert'
+export const meta = {
+    title: 'Adding Custom Domains',
+    description: 'Learn how to add a custom domain to your Sitesauce site in no time.',
+    publishedAt: 'April 27th, 2020'
+}
+
+You've created your new static site with Sitesauce, and now you want to put it in production. However, that `.vercel.app` subdomain is standing in your way. Let's fix it!
+
+First, you'll need to login into [your Vercel account](https://vercel.app/login) and find your site. You can do this by either manually searching through your sites or by clicking the `View on Vercel` button shown on any of your completed deployments for your site, then clicking the name of your site as shown on the top navigation.
+
+![Here's the name of your site](https://sitesauce.app/assets/vercel-site-select.png)
+
+Once you have opened your site on Vercel, you'll want to click on the View Domains button that appears to the right of the "Production Deployment" heading to be taken to the domains page. You can also find this page by clicking on the Domains tab on your Vercel site's settings page.
+
+![Click the button to be taken to the domains page](https://sitesauce.app/assets/view-domains-button.png "left")
+
+Once you are on the domains page, you'll be able to add a new domain by typing it into the input below the header. If it's the first time you use this domain within Vercel, you'll be asked to make some DNS changes. You can choose to either move your domain to Vercel by updating your nameservers or just create a A record from your domain (or subdomain) to `76.76.21.21`. We recommend you to use the latter, as it's way simpler. Once you've updated your DNS, Vercel will generate a new SSL certificate for your domain and add it to your site, at which point you'll see a valid configuration checkmark next to it.
+
+Finally, you'll need to go into Sitesauce and create a new deployment for your site. This will pull your new domain from Vercel and set it as the main domain in your URLs. Enjoy your new domain!
+
+export default props => <Page {...meta} {...props} />

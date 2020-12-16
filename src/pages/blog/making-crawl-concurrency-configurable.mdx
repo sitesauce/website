@@ -1,0 +1,15 @@
+import Page from '../../components/Page'
+import Alert from '../../components/Alert'
+export const meta = {
+    title: 'Making crawl concurrency configurable',
+    description: 'Starting today, you can configure the maximum number of simultaneous requests Sitesauce will use when crawling your site.',
+    publishedAt: 'May 12th, 2020'
+}
+
+When building your static site, Sitesauce crawls your website in order to detect all your pages and assets. To make this process faster, we use multiple processes to visit different parts of your website at the same time. However, there's a limit of what each server can handle, and some people have found the process to be too much for their server, while others would like it to be faster.
+
+Starting today, you can configure the maximum number of simultaneous requests we make to your website from your Site Settings, so you can find the perfect balance between performance and speed.
+
+<Alert>Keep in mind this does in no way affect the speed or performance of the generated site.</Alert>
+
+export default props => <Page {...meta} {...props} />

@@ -1,0 +1,14 @@
+import Page from '../../components/Page'
+export const meta = {
+    title: 'Improving the UI for Proxying & Redirects',
+    description: "We've completely redesigned our proxying UI to make it much more easier to use. Here's the new one.",
+    publishedAt: 'May 14th, 2020'
+}
+
+Let's face it, the UI you have to use to configure proxying and redirects isn't great. It's one of the few pieces that survived from the first redesign, and many users are confused about how to use it. Proxying is one of the most powerful features Sitesauce offers, so it was time to give it some more love.
+
+![Here's the modal you'll use to configure this from now on](https://sitesauce.app/assets/new-rules-ui.png)
+
+Today we're launching a new, much cleaner UI for configuring this feature, with improved explanations for what each field does. We've also updated [our documentation](https://sitesauce.app/guides/proxying-and-redirects) to mention and explain our regex support and showcase its power.
+
+export default props => <Page {...meta} {...props} />
