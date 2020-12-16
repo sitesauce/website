@@ -13,7 +13,6 @@ module.exports = withMDX({
 	},
 	experimental: {
 		optimizeCss: true,
-		optimizeImages: true,
 	},
 	future: {
 		excludeDefaultMomentLocales: true,
