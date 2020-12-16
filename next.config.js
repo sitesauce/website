@@ -10,7 +10,7 @@ module.exports = withMDX({
 	poweredByHeader: false,
 	crossOrigin: 'anonymous',
 	images: {
-		domains: ['images.sitesauce.app', 'miguelpiedrafita.com'],
+		domains: ['brand-assets.sitesauce.app', 'images.sitesauce.app', 'miguelpiedrafita.com'],
 	},
 	experimental: {
 		optimizeCss: true,
