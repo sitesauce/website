@@ -39,12 +39,13 @@ module.exports = {
 			},
 			boxShadow: theme => ({
 				cta: `6px 6px 0 0 ${hexToRgba(theme('colors.brand.400'), '.5')}`,
+				'cta-hover': `3px 3px 0 0 ${hexToRgba(theme('colors.brand.400'), '.5')}`,
 				brand: `6px 6px 0 0 ${hexToRgba(theme('colors.brand.400'), '.22')}`,
 				'brand-reverse': `-6px 6px 0 0 ${hexToRgba(theme('colors.brand.400'), '.22')}`,
 				'brand-hover': `3px 3px 0 0 ${hexToRgba(theme('colors.brand.500'), '.22')}`,
 			}),
 			translate: {
-				'cta-hover': '6px',
+				'cta-hover': '3px',
 			},
 			fontFamily: {
 				jetbrains: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],

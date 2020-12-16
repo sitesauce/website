@@ -1,18 +1,26 @@
-import { useState } from 'react'
+import Image from 'components/Image'
+import { useRef, useState } from 'react'
 
 const Pricing = ({ children }) => {
+	const pricingFocus = useRef()
 	const [isYearly, setYearly] = useState(false)
+
+	const changePeriod = () => {
+		setYearly(state => !state)
+
+		pricingFocus.current.scrollIntoView({ behavior: 'smooth' })
+	}
 
 	return (
 		<div id="pricing" className="bg-brand-50 px-5% py-24 relative">
-			<img src="/img/background/yellow-section6-blob.png" alt="" className="image-40" />
-			<img src="/img/background/scribble-section6-left.svg" alt="" className="image-59" />
+			<Image src="/img/background/yellow-section6-blob.png" alt="" className="image-40" unsized loading="lazy" />
+			<Image src="/img/background/scribble-section6-left.svg" alt="" className="image-59" unsized loading="lazy" />
 			<div className="container text-center">
-				<h1 className="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">Simple, no-tricks pricing</h1>
-				<p id="pricing-focus" className="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">
+				<h2 className="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">Simple, no-tricks pricing</h2>
+				<p ref={pricingFocus} className="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">
 					No surprises or hidden fees, ever.
 				</p>
-				<img src="/img/background/pricing-separator.png" srcSet="/img/background/pricing-separator-x500.png 500w, /img/background/pricing-separator-x800.png 800w, /img/background/pricing-separator-x1080.png 1080w, /img/background/pricing-separator.png 1448w" sizes="(max-width: 479px) 280px, (max-width: 767px) 300px, 400px" alt="" className="image-76 mx-auto" />
+				<Image src="/img/background/pricing-separator.png" alt="" className="image-76 mx-auto" unsized loading="lazy" />
 				<div className="max-w-lg mx-auto rounded-lg overflow-hidden lg:max-w-none lg:flex my-10 shadow-brand border-4 border-brand-400">
 					<div className="bg-white px-6 py-8 lg:flex-shrink-1 lg:p-12">
 						<h3 className="text-2xl font-spoof text-left leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9">Team Subscription</h3>
@@ -49,22 +57,26 @@ const Pricing = ({ children }) => {
 						<a className="font-spoof font-bold text-lg" href="mailto:miguel@sitesauce.app?subject=Get%20Started%20Call" target="_blank" rel="noreferrer">
 							Schedule now
 						</a>
-						<img src="/img/background/arrow.svg" alt="" className="ml-2" />
+						<svg className="ml-2 w-3 h-3" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 1l7 4.5L5 10M12 5.5H1" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+						</svg>
 					</div>
 				</div>
 				<div className="pt-12 md:pt-0 z-30 relative">
 					<h1 className="text-center font-spoof text-2xl leading-10 font-extrabold text-gray-900 relative">{isYearly ? 'Monthly Pricing' : 'Annual pricing'}</h1>
 					<p className="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-center extra">{isYearly ? 'Make a smaller payment every month for more granular control.' : 'Make a single payment per year and get 20% discount.'}</p>
 					<div className="inline-flex items-center justify-center mt-10 font-spoof text-black w-full pb-2">
-						<a className="font-spoof font-bold text-lg" href="#pricing-focus" onClick={() => setYearly(state => !state)}>
+						<a className="font-spoof font-bold text-lg" href="#pricing-focus" onClick={changePeriod}>
 							See {isYearly ? 'monthly' : 'annual'} pricing
 						</a>
-						<img src="/img/background/arrow.svg" alt="" className="ml-2" />
+						<svg className="ml-2 w-3 h-3" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 1l7 4.5L5 10M12 5.5H1" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+						</svg>
 					</div>
 				</div>
 			</div>
-			<img src="/img/background/purple-section7-blob.png" alt="" className="image-46" />
-			<img src="/img/background/scribble-section7-right.svg" alt="" className="image-60" />
+			<Image src="/img/background/purple-section7-blob.png" alt="" className="image-46" unsized loading="lazy" />
+			<Image src="/img/background/scribble-section7-right.svg" alt="" className="image-60" unsized loading="lazy" />
 		</div>
 	)
 }

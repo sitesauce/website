@@ -1,8 +1,10 @@
+import Image from 'components/Image'
+
 const Features = ({ title, description, cta, children }) => {
 	return (
 		<div id="features" className="relative bg-gray-50 px-5% py-24">
-			<img src="/img/background/purple-section2-blob.png" alt="" className="image-41" />
-			<img src="/img/background/scribble-section2-right.svg" alt="" className="image-56" />
+			<Image src="/img/background/purple-section2-blob.png" alt="" className="image-41" unsized loading="lazy" />
+			<Image src="/img/background/scribble-section2-right.svg" alt="" className="image-56" unsized loading="lazy" />
 			<div className="container text-center">
 				<h1 className="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">{title}</h1>
 				<div className="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0">{description}</div>
@@ -13,7 +15,7 @@ const Features = ({ title, description, cta, children }) => {
 					{cta}
 				</a>
 			</div>
-			<img src="/img/background/line.svg" alt="" className="image-33 _3" />
+			<Image src="/img/background/line.svg" alt="" className="image-33 _3 h-24 w-10 mb-6" unsized loading="lazy" />
 		</div>
 	)
 }

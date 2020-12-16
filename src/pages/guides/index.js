@@ -5,7 +5,7 @@ import { getAllGuidePreviews } from 'utils/getContent'
 const Blog = ({ guides }) => {
 	return (
 		<Layout title="Sitesauce Guides - An expanding collection of Sitesauce knowledge, from basics to mastery." description="An expanding collection of Sitesauce knowledge, from basics to mastery." image="https://brand-assets.sitesauce.app/guides-card.png">
-			<div className="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-1">
+			<div className="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-10">
 				<div className="relative max-w-7xl mx-auto">
 					<div className="text-center">
 						<span className="uppercase text-brand-900 font-brown">Mastering Sitesauce</span>
@@ -17,7 +17,7 @@ const Blog = ({ guides }) => {
 							<Link key={guide.slug} href={`/guides/${guide.slug}`}>
 								<a className="flex flex-col rounded-lg shadow-brand hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1 overflow-hidden transition duration-300 ease-in-out relative">
 									<div className="flex-shrink-0">
-										<img className="h-48 w-full object-cover" src={guide.image} alt={guide.title} />
+										<img className="h-48 w-full object-cover" src={guide.image} alt={guide.title} loading="lazy" />
 									</div>
 									<div className="border-b border-l border-r border-brand-300 flex-1 bg-white px-6 py-3 flex flex-col justify-between rounded-b-lg">
 										<div className="flex-1">

@@ -1,13 +1,15 @@
+import Image from 'components/Image'
+
 const HowItWorks = ({ children }) => {
 	const testimonial = children[0]
 	const steps = children.slice(1)
 
 	return (
 		<div id="how-it-works" className="relative px-5% py-24 bg-white">
-			<img src="/img/background/blue-section1-blob.png" srcSet="/img/background/blue-section1-blob-x500.png 500w, /img/background/blue-section1-blob.png 600w" sizes="(max-width: 767px) 250px, 300px" alt="" className="md:hidden lg:block image-35" />
-			<img src="/img/background/orange-section1-blob.png" srcSet="/img/background/orange-section1-blob-x500.png 500w, /img/background/orange-section1-blob.png 600w" sizes="300px" alt="" className="image-36" />
-			<img src="/img/background/scribble-section1-left.svg" alt="" className="md:hidden lg:block image-55" />
-			<img src="/img/background/scribble-section1-right.svg" alt="" className="image-54" />
+			<Image src="/img/background/blue-section1-blob.png" alt="" className="md:hidden lg:block image-35" unsized />
+			<Image src="/img/background/orange-section1-blob.png" alt="" className="image-36" unsized />
+			<Image src="/img/background/scribble-section1-left.svg" alt="" className="md:hidden lg:block image-55" unsized />
+			<Image src="/img/background/scribble-section1-right.svg" alt="" className="image-54" unsized />
 			<div className="container">
 				<h1 className="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">How does it work?</h1>
 				<div className="mt-10 flex flex-col-reverse lg:flex-row items-center justify-between">
@@ -19,7 +21,7 @@ const HowItWorks = ({ children }) => {
 					</div>
 				</div>
 			</div>
-			<img src="/img/background/line.svg" alt="" className="image-33 _2" />
+			<Image src="/img/background/line.svg" alt="" className="image-33 _2" unsized />
 		</div>
 	)
 }
@@ -34,8 +36,8 @@ export const Testimonial = ({ content, children }) => (
 
 export const TestimonialAuthor = ({ avatar, name, company, color, url }) => (
 	<div className="text-left inline-flex items-center">
-		<img src={avatar} width="40" alt={name} className="mr-3 rounded-full" />
-		<p className="text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed">
+		<Image src={avatar} width={40} height={40} alt={name} loading="lazy" className="rounded-full" />
+		<p className="ml-3 text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed">
 			{name}, Founder of{' '}
 			<a className="border-b-2 border-transparent hover:border-current transition" href={url} target="_blank" rel="noreferrer" style={{ color }}>
 				{company}

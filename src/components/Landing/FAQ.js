@@ -1,12 +1,14 @@
+import Image from 'components/Image'
+
 const FAQ = ({ children }) => {
 	return (
 		<>
-			<div className="bg-white relative z-1">
+			<div className="bg-white relative">
 				<div id="faq" className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-					<img src="/img/background/red-section8-blob.png" alt="" className="image-45 _87" />
-					<img src="/img/background/scribble-section8-left.svg" alt="" className="image-61" />
+					<Image src="/img/background/red-section8-blob.png" alt="" className="image-45 _87" unsized loading="lazy" />
+					<Image src="/img/background/scribble-section8-left.svg" alt="" className="image-61" unsized loading="lazy" />
 					<h2 className="text-center font-spoof text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 relative">Frequently asked questions</h2>
-					<div className="mt-8 border-t-2 border-gray-200 pt-6 prose max-w-full">
+					<div className="mt-8 border-t-2 border-gray-200 pt-6 prose max-w-full relative z-10">
 						<dl className="my-8">
 							{children.map(({ props: entry }, key) => (
 								<FAQEntry key={key} i={key} {...entry} />
@@ -14,7 +16,7 @@ const FAQ = ({ children }) => {
 						</dl>
 					</div>
 				</div>
-				<img src="/img/background/scribble-section9-left.svg" alt="" className="hidden md:block image-62" />
+				<Image src="/img/background/scribble-section9-left.svg" alt="" className="hidden md:block image-62" unsized loading="lazy" />
 			</div>
 		</>
 	)

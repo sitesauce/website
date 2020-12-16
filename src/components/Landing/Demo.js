@@ -1,7 +1,9 @@
+import Image from 'components/Image'
+
 const Demo = () => {
 	return (
 		<div id="demo" className="bg-gray-50 relative py-24 px-5%">
-			<img src="/img/background/scribble-section5-left.svg" alt="" className="image-63" />
+			<Image src="/img/background/scribble-section5-left.svg" alt="" className="image-63" unsized loading="lazy" />
 			<div className="container text-center">
 				<h1 className="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4">See it in action</h1>
 				<p className="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0 max-w-3xl mx-auto">Learn everything Sitesauce has to offer in this short introductory video.</p>
@@ -11,10 +13,10 @@ const Demo = () => {
 					</div>
 				</div>
 			</div>
-			<img src="/img/background/green-section3-blob.png" alt="" className="image-48" />
-			<img src="/img/background/scribble-section3-left.svg" alt="" className="image-57" />
-			<img src="/img/background/blue-section4-blob.png" alt="" className="image-47 z-10" />
-			<img src="/img/background/scribble-section4-right.svg" alt="" className="image-58 z-20" />
+			<Image src="/img/background/green-section3-blob.png" alt="" className="image-48" unsized loading="lazy" />
+			<Image src="/img/background/scribble-section3-left.svg" alt="" className="image-57" unsized loading="lazy" />
+			<Image src="/img/background/blue-section4-blob.png" alt="" className="image-47 z-10" unsized loading="lazy" />
+			<Image src="/img/background/scribble-section4-right.svg" alt="" className="image-58 z-20" unsized loading="lazy" />
 		</div>
 	)
 }

@@ -1,3 +1,4 @@
+import Image from 'components/Image'
 import Layout from 'components/Layout'
 import Link from 'next/link'
 import { format as timeago } from 'timeago.js'
@@ -6,7 +7,7 @@ import { getAllPostPreviews } from 'utils/getContent'
 const Blog = ({ posts }) => {
 	return (
 		<Layout title="Static Words - The Official Sitesauce Blog" description="News, tips, highlights, and other behind-the-scenes content from Sitesauce." image="https://brand-assets.sitesauce.app/blog-card.png">
-			<div className="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-1">
+			<div className="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-10">
 				<div className="relative max-w-7xl mx-auto">
 					<div className="text-center">
 						<span className="uppercase text-brand-900 font-brown">The Official Sitesauce Blog</span>
@@ -18,7 +19,7 @@ const Blog = ({ posts }) => {
 							<Link key={post.slug} href={`/blog/${post.slug}`}>
 								<a className="flex flex-col rounded-lg shadow-brand hover:shadow-brand-hover overflow-hidden transition duration-300 ease-in-out">
 									<div className="flex-shrink-0">
-										<img className="h-48 w-full object-cover" src={post.image} alt={post.title} />
+										<img className="h-48 w-full object-cover" src={post.image} alt={post.title} loading="lazy" />
 									</div>
 									<div className="border-b border-l border-r border-brand-300 flex-1 bg-white px-6 pt-3 pb-6 flex flex-col justify-between rounded-b-lg">
 										<div className="flex-1">
@@ -29,7 +30,7 @@ const Blog = ({ posts }) => {
 										<div className="mt-6 flex items-center">
 											<div className="flex-shrink-0">
 												<div>
-													<img className="h-10 w-10 rounded-full" src="https://miguelpiedrafita.com/images/_site/logo.png" alt="Miguel Piedrafita" />
+													<Image className="h-10 w-10 rounded-full" width="40" height={'40'} src="https://miguelpiedrafita.com/images/_site/logo.png" alt="Miguel Piedrafita" loading="lazy" />
 												</div>
 											</div>
 											<div className="ml-3">
