@@ -11,6 +11,13 @@ module.exports = withMDX({
 	images: {
 		domains: ['images.sitesauce.app', 'miguelpiedrafita.com'],
 	},
+	experimental: {
+		optimizeCss: true,
+		optimizeImages: true,
+	},
+	future: {
+		excludeDefaultMomentLocales: true,
+	},
 	rewrites: () => [
 		{ source: '/blog/feed.xml', destination: '/_next/static/posts.xml' },
 		{ source: '/guides/feed.xml', destination: '/_next/static/guides.xml' },
