@@ -9,10 +9,10 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="en">
-				<Head crossOrigin />
+				<Head />
 				<body>
 					<Main />
-					<NextScript crossOrigin />
+					<NextScript />
 				</body>
 			</Html>
 		)

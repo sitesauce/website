@@ -8,6 +8,7 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
 	pageExtensions: ['js', 'jsx', 'mdx'],
 	poweredByHeader: false,
+	crossOrigin: 'anonymous',
 	images: {
 		domains: ['images.sitesauce.app', 'miguelpiedrafita.com'],
 	},
