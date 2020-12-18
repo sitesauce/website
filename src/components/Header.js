@@ -55,7 +55,7 @@ const Header = () => {
 							</a>
 						</div>
 					</div>
-					<button onClick={() => setOpen(state => !state)} type="button" className="inline-flex lg:hidden items-center justify-center p-2 rounded-lg text-white shadow-brand hover:shadow-brand-hover transition duration-150 ease-in-out focus:outline-none border-2 border-brand-100 my-1" aria-label="Toggle Navigation">
+					<button onClick={() => setOpen(state => !state)} type="button" className="bg-brand-100 inline-flex lg:hidden items-center justify-center p-2 rounded-lg text-white shadow-brand hover:shadow-brand-hover transition duration-150 ease-in-out focus:outline-none border-2 border-brand-100 my-1 transform hover:translate-x-1 hover:translate-y-1 focus:translate-x-1 focus:translate-y-1" aria-label="Toggle Navigation">
 						<svg className="h-6 w-6 text-brand-400" stroke="currentColor" fill="none" viewBox="0 0 24 24">
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
 						</svg>
@@ -73,7 +73,7 @@ const Header = () => {
 											</svg>
 										</div>
 										<div className="-mr-2">
-											<button onClick={() => setOpen(state => !state)} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+											<button onClick={() => setOpen(state => !state)} type="button" className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
 												<svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
 													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
 												</svg>
