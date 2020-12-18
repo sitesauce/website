@@ -21,7 +21,6 @@ const HowItWorks = ({ children }) => {
 					</div>
 				</div>
 			</div>
-			<Image src="/img/background/line.svg" alt="" className="image-33 _2" unsized />
 		</div>
 	)
 }

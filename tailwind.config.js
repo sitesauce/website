@@ -21,6 +21,7 @@ module.exports = {
 				},
 			},
 			zIndex: {
+				'-1': '-1',
 				1: '1',
 				100: '100',
 			},
@@ -140,6 +141,7 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
+		require('@tailwindcss/aspect-ratio'),
 		({ addBase }) =>
 			addBase([
 				{

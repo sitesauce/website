@@ -8,7 +8,7 @@ const Open = () => {
 	return (
 		<div className="pb-4 bg-brand-50">
 			<div className="relative">
-				<div className="absolute inset-0 h-1/2 bg-gray-50" />
+				<div className="absolute inset-0 h-1/2 bg-white" />
 				<div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="max-w-4xl mx-auto">
 						<Link href="/open">

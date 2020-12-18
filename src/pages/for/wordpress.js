@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<div className="overflow-hidden">
-				<Header title="Generate a static site from your WordPress website in one click" description="Sitesauce instantly converts your WordPress website into a static site, and keeps your content in sync." cta="Start your 7-day trial" />
+				<Header title="Generate a static site from your WordPress website in one click" description="Sitesauce instantly converts your WordPress website into a static site, and keeps your content in sync." cta="Get started for free" />
 				<Features title="What's in it for me?" description="Enjoy all the benefits static sites provide while keeping the ease of editing WordPress gives you." cta="See pricing">
 					<FeatureItem title="Minimal costs" description="Sitesauce hosts your static sites on Vercel, offering unlimited bandwidth and their world-class CDN for no additional cost." icon={icons.Wallet} />
 					<FeatureItem title="Blazing-fast load times" description="Executing expensive operations on build and serving your sites through Vercel's world-class CDN results in semi-instantaneous page loads." icon={icons.Bolt} />
@@ -33,7 +33,6 @@ export default function Home() {
 					<Step title="We deploy your site" description="We trigger the first deployment, which generates your static site and deploys it to Vercel." />
 					<Step title="We keep your content updated" description="When your content changes we trigger a new deployment, which updates your static site." />
 				</HowItWorks>
-				<Demo />
 				{/* <Brands /> */}
 				<Open />
 				<Pricing>
