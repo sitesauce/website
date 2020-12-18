@@ -4,10 +4,8 @@ import Link from 'next/link'
 const Header = ({ title, description, cta }) => {
 	const { data: stats } = useStats()
 
-	const formatNumber = number => {
-		if (!number) return
-
-		return new Intl.NumberFormat(typeof navigator.language != 'undefined' ? navigator.language : 'en-EN').format(stats?.sitesauce?.sites)
+	const formatNumber = (number, defaultValue) => {
+		return new Intl.NumberFormat(typeof navigator != 'undefined' ? navigator.language : 'en-EN').format(number || defaultValue)
 	}
 
 	return (
@@ -29,7 +27,7 @@ const Header = ({ title, description, cta }) => {
 			<div className="relative overflow-visible h-auto bg-brand-50 pt-24 lg:pt-48 pb-24 px-5%">
 				<div className="flex flex-col-reverse sm:flex-row items-center justify-between space-x-4">
 					<div className="ml-4">
-						<h1 className="max-w-4xl my-6 font-spoof text-4xl md:text-5xl lg:text-6xl text-black mx-auto tracking-tight font-bold">{title}</h1>
+						<h1 className="max-w-3xl my-6 font-spoof text-4xl md:text-5xl lg:text-6xl text-black mx-auto tracking-tight font-bold">{title}</h1>
 						<div className="font-ttnorms text-black text-xl leading-relaxed lg:text-2xl max-w-2xl">{description}</div>
 						<a href="https://app.sitesauce.app/register" className="text-center w-auto mx-auto mt-8 sm:mt-10 py-4 px-8 sm:px-10 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1">
 							{cta}
@@ -37,7 +35,9 @@ const Header = ({ title, description, cta }) => {
 						<p className="mt-4 sm:mt-6 text-brand-900 font-medium z-20 relative">
 							We have deployed{' '}
 							<Link href="/open">
-								<a className="border-b-2 border-brand-700 pb-0.5">over {formatNumber(stats?.sitesauce?.deployments)} sites</a>
+								<a className="border-b-2 border-brand-700 pb-0.5">
+									over <span className="proportional-nums">{formatNumber(stats?.sitesauce?.deployments, 30000)}</span> sites
+								</a>
 							</Link>{' '}
 							across the internet, yours could be the next!
 						</p>

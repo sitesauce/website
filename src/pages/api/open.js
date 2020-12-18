@@ -9,7 +9,8 @@ export default async (req, res) => {
 export async function getStats() {
 	const sitesauce = axios.get('https://app.sitesauce.app/api/meta').then(res => res.data)
 	const fathom = axios.get(`https://app.usefathom.com/sites/1025/charts?from=${formatISO9075(new Date(new Date() - 30 * 24 * 60 * 60 * 1000))}&to=${formatISO9075(new Date())}&tz=Europe/Madrid`).then(res => res.data)
-	const baremetrics = axios.get(`https://api.baremetrics.com/v1/metrics?start_date=${new Date(new Date() - 7 * 24 * 60 * 60 * 1000).toDateString()}&end_date=${new Date().toDateString()}`, { headers: { Authorization: `Bearer ${process.env.BAREMETRICS_TOKEN}` } }).then(res => res.data.metrics.reverse().map(({ mrr, active_subscriptions, active_trials }) => ({ mrr: mrr / 100, customers: active_subscriptions, trials: active_trials }))[0])
+	const baremetrics = axios.get('https://sitesauce-revenue.now.sh/api').then(res => res.data)
+	//const baremetrics = axios.get(`https://api.baremetrics.com/v1/metrics?start_date=${new Date(new Date() - 7 * 24 * 60 * 60 * 1000).toDateString()}&end_date=${new Date().toDateString()}`, { headers: { Authorization: `Bearer ${process.env.BAREMETRICS_TOKEN}` } }).then(res => res.data.metrics.reverse().map(({ mrr, active_subscriptions, active_trials }) => ({ mrr: mrr / 100, customers: active_subscriptions, trials: active_trials }))[0])
 	const vapor = axios.get('https://vapor.laravel.com/api/projects/8900/environments/production/metrics?period=1M', { headers: { Authorization: `Bearer ${process.env.VAPOR_TOKEN}` } }).then(res => res.data.estimatedCost)
 
 	return { updated_at: new Date().toISOString(), sitesauce: await sitesauce, revenue: await baremetrics, vapor: await vapor, fathom: await fathom }

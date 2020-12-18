@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<div className="overflow-hidden">
-				<Header title="A static version of your website in one click" description="Sitesauce converts dynamic websites (like WordPress-powered websites) into static sites, and keeps content in sync." cta="Get started for free" />
+				<Header title="Supercharge your website in one click" description="We transform your website into a static site for maximum speed and scalability, then keep your content synced." cta="Get started for free" />
 				<Features title="What's in it for me?" description="Enjoy all the benefits static sites provide while keeping everything good about the backend." cta="See pricing">
 					<FeatureItem title="Minimal costs" description="Sitesauce hosts your static sites on Vercel (formerly ZEIT), offering unlimited bandwidth and their world-class CDN for no additional cost." icon={icons.Wallet} />
 					<FeatureItem title="Blazing-fast load times" description="Executing expensive operations on build and serving your sites through Vercel's world-class CDN results in semi-instantaneous page loads." icon={icons.Bolt} />
