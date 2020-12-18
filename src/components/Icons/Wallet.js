@@ -1,5 +1,5 @@
 const Wallet = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20" style={{ filter: 'drop-shadow(2px 2px 4px #0694a2)' }}>
 		<path className="text-brand-400" fill="currentColor" d="M98 66v20a4 4 0 0 1-4 4H8.5A8.5 8.5 0 0 1 0 81.5v-63C0 13.8 3.8 10 8.5 10H82a4 4 0 0 1 4 4h4v3h4v4a4 4 0 0 1 4 4v21a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2z" />
 		<path className="text-brand-400" fill="currentColor" d="M70 56a10 10 0 0 1 10-10h18a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H80a10 10 0 0 1-10-10z" />
 		<circle className="text-brand-300" cx="80" cy="56" r="5" fill="currentColor" />

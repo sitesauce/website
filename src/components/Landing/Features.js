@@ -11,7 +11,7 @@ const Features = ({ title, description, cta, children }) => {
 				<div className="mt-20 grid gap-x-13 gap-y-24 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-auto-6 sm:grid-rows-auto-3 lg:grid-rows-auto-2" style={{ gridAutoColumns: '1fr' }}>
 					{children}
 				</div>
-				<a href="#pricing-focus" className="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover">
+				<a href="#pricing-focus" className="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1">
 					{cta}
 				</a>
 			</div>

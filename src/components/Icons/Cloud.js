@@ -1,5 +1,5 @@
 const Cloud = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20" style={{ filter: 'drop-shadow(2px 2px 4px #0694a2)' }}>
 		<path className="text-brand-100" fill="currentColor" d="M83 74a17 17 0 0 0 3.93-33.54 15 15 0 0 0-18.08-16.13 27 27 0 0 0-50 5.9A22 22 0 0 0 22 74h61z" />
 		<circle className="text-brand-400" cx="50" cy="73" r="18" fill="currentColor" />
 		<path className="text-red-50" fill="currentColor" d="M50 68a5.02 5.02 0 0 0-5 5c0 1.38.56 2.63 1.46 3.54l-.7.7-1.42 1.42-.7.7A9.06 9.06 0 0 1 41 73a9 9 0 0 1 9-9v-3l1 1 3.3 3.3.7.7-.7.7L51 70l-1 1v-3zm5 5c0-1.38-.56-2.63-1.46-3.54l.7-.7 1.42-1.42.7-.7A9.06 9.06 0 0 1 59 73a9 9 0 0 1-9 9v3l-1-1-3.3-3.3-.7-.7.7-.7L49 76l1-1v3a5.02 5.02 0 0 0 5-5z" />

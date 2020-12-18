@@ -1,5 +1,5 @@
 const Shield = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20" style={{ filter: 'drop-shadow(2px 2px 4px #0694a2)' }}>
 		<path className="text-brand-500" fill="currentColor" d="M50 2A85.6 85.6 0 0 0 8 12.94v47.05c0 10.26 7.7 22.22 17.04 26.47L50 97.8l24.96-11.34C84.3 82.2 92 70.26 92 59.99V12.94A85.6 85.6 0 0 0 50 2z" />
 		<path className="text-brand-100" fill="currentColor" d="M71.23 78.27C77.37 75.47 83 66.73 83 59.99V18.41A76.67 76.67 0 0 0 50 11a76.67 76.67 0 0 0-33 7.4V60c0 6.73 5.64 15.48 11.77 18.27L50 87.92l21.23-9.65z" />
 		<path className="text-brand-400" fill="currentColor" d="M50 62a16 16 0 1 0 0-32 16 16 0 0 0 0 32z" />

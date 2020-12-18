@@ -1,5 +1,5 @@
 const Processor = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20" style={{ filter: 'drop-shadow(2px 2px 4px #0694a2)' }}>
 		<path className="text-brand-400" fill="currentColor" d="M6 0a6 6 0 0 0-6 6v88a6 6 0 0 0 6 6h88a6 6 0 0 0 6-6V6a6 6 0 0 0-6-6H6z" />
 		<path className="text-brand-300" fill="currentColor" d="M24 11h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zM24 81h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm8 0h4v8h-4v-8zm-61-5v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm70 48v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8zm0-8v-4h8v4h-8z" />
 		<path className="text-brand-300" fill="currentColor" fillRule="nonzero" d="M18 20c0-1.1.9-2 2-2h60a2 2 0 0 1 2 2v60a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V20z" />

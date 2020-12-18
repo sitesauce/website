@@ -26,7 +26,7 @@ const HowItWorks = ({ children }) => {
 }
 
 export const Testimonial = ({ content, children }) => (
-	<div className="lg:mr-10 w-full lg:w-auto flex flex-col justify-center relative px-4 md:px-12 py-8 bg-white rounded-lg shadow-brand z-1">
+	<div className="lg:mr-10 w-full lg:w-auto flex flex-col justify-center relative px-4 md:px-12 py-8 bg-white rounded-lg shadow-brand z-1 border-2 border-brand-300">
 		<p className="font-brown mb-0 text-3xl leading-9 text-left text-brand-400">&quot;</p>
 		<div className="mb-8 text-black lg:max-w-xl text-left font-brown text-2xl md:text-3xl leading-normal">{content}</div>
 		{children}

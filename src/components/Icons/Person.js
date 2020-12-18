@@ -1,5 +1,5 @@
 const Person = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" className="absolute w-20" style={{ filter: 'drop-shadow(2px 2px 4px #0694a2)' }}>
 		<path className="text-brand-400" fill="currentColor" d="M66.11 73.8L51 66.23V72a10 10 0 1 1-20 0v-5.76L7.27 78.1A8.65 8.65 0 0 0 3 85v13h72.24a17 17 0 0 1-9.13-24.2z" />
 		<path className="text-brand-100" fill="currentColor" d="M33 60.5V72a8 8 0 1 0 16 0V60.5A22 22 0 0 0 63 40V24a22 22 0 0 0-44 0v16a22 22 0 0 0 14 20.5z" />
 		<circle className="text-brand-300" cx="81" cy="82" r="17" fill="currentColor" />
