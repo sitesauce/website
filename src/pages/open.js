@@ -131,7 +131,7 @@ const Open = ({ stats: initialStats }) => {
 				<p />
 				<h3>Profit</h3>
 				<p>
-					<strong>~{formatCurrency(stats?.revenue.mrr - cost)}</strong> per month (${formatCurrency((stats?.revenue.mrr - cost) * 12)} per&nbsp;year)
+					<strong>~{formatCurrency(stats?.revenue.mrr - cost)}</strong> per month ({formatCurrency((stats?.revenue.mrr - cost) * 12)} per&nbsp;year)
 				</p>
 				<details>
 					<summary>How is profit calculated?</summary>
