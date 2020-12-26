@@ -36,7 +36,7 @@ const Pricing = ({ children }) => {
 					<div className="py-8 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
 						<p className="text-xl leading-6 font-medium text-gray-900 font-spoof lg:max-w-xs lg:mx-auto mb-0 lg:mb-6">A single payment for your entire team</p>
 						<div className="my-10 lg:my-6 flex items-baseline justify-center text-5xl leading-none font-extrabold text-gray-900">
-							<span className="font-brown">${isYearly ? 190 : 10}</span>
+							<span className="font-brown">${isYearly ? 199 : 19}</span>
 							<span className="text-xl leading-7 font-medium text-gray-500 font-ttnorms">/{isYearly ? 'year' : 'month'}</span>
 						</div>
 						<div className="lg:mt-6">
@@ -64,7 +64,7 @@ const Pricing = ({ children }) => {
 				</div>
 				<div className="pt-12 md:pt-0 z-30 relative">
 					<h1 className="text-center font-spoof text-2xl leading-10 font-extrabold text-gray-900 relative">{isYearly ? 'Monthly Pricing' : 'Annual pricing'}</h1>
-					<p className="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-center extra">{isYearly ? 'Make a smaller payment every month for more granular control.' : 'Make a single payment per year and get 20% discount.'}</p>
+					<p className="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-center extra">{isYearly ? 'Make a smaller payment every month for more granular control.' : 'Make a single payment per year and get ~15% discount.'}</p>
 					<div className="inline-flex items-center justify-center mt-10 font-spoof text-black w-full pb-2">
 						<a className="font-spoof font-bold text-lg" href="#pricing-focus" onClick={changePeriod}>
 							See {isYearly ? 'monthly' : 'annual'} pricing
