@@ -29,7 +29,7 @@ const Header = ({ title, description, cta }) => {
 				<div className="flex flex-col-reverse sm:flex-row items-center justify-between space-x-4">
 					<div className="ml-4">
 						<h1 className="max-w-3xl my-6 font-spoof text-4xl md:text-5xl xl:text-6xl text-black mx-auto tracking-tight font-bold">{title}</h1>
-						<div className="font-ttnorms text-black text-xl leading-relaxed xl:text-2xl max-w-xl xl:max-w-2xl">{description}</div>
+						<p className="font-ttnorms text-black text-xl leading-relaxed xl:text-2xl max-w-xl xl:max-w-2xl">{description}</p>
 						<a href="https://app.sitesauce.app/register" className="text-center w-auto mx-auto mt-8 xl:mt-10 py-4 px-8 sm:px-10 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1">
 							{cta}
 						</a>
