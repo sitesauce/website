@@ -8,7 +8,7 @@ const installQuicksand = pid => {
 	var firstScript = document.getElementsByTagName('script')[0]
 	tracker.id = 'quicksand-script'
 	tracker.async = true
-	tracker.src = `https://analytics.quicksand.ai/qsand.js?pid=${pid}`
+	tracker.src = `https://brain.quicksand.ai/qsand.js?pid=${pid}`
 	firstScript.parentNode.insertBefore(tracker, firstScript)
 }
 
