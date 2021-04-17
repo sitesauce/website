@@ -1,8 +1,0 @@
-{
-    "routes": [
-        {"src":"\/analytics", "status":200, "dest":"https:\/\/app.usefathom.com\/share\/atrfrddr\/sitesauce.app"},
-        {"src":"\/status", "status":200, "dest":"https:\/\/sitesauce.instatus.com\/"},
-        {"src":"\/incidents", "status":200, "dest":"https:\/\/sitesauce.instatus.com\/incidents"},
-        {"src":"\/sites\/1025\/(.*)", "status":200, "dest":"https:\/\/app.usefathom.com\/sites\/1025\/$1"}
-    ]
-}
