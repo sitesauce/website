@@ -2,8 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const hexToRgba = require('hex-to-rgba')
 
 module.exports = {
-	purge: ['./src/**/*.js'],
-	darkMode: false, // or 'media' or 'class'
+    mode: 'jit',
+	purge: ['./src/**/*.{js,jsx}'],
+	darkMode: false,
 	theme: {
 		extend: {
 			colors: {
@@ -135,9 +136,6 @@ module.exports = {
 				},
 			}),
 		},
-	},
-	variants: {
-		extend: {},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),

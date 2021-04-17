@@ -6,7 +6,7 @@
           "preset-env": {},
           "transform-runtime": {},
           "styled-jsx": {
-            "plugins": ["@thedadi/styled-jsx-plugin-postcss"]
+            "plugins": ["styled-jsx-plugin-postcss"]
           },
           "class-properties": {}
         }

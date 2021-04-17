@@ -12,19 +12,17 @@ module.exports = withMDX({
 	images: {
 		domains: ['brand-assets.sitesauce.app', 'images.sitesauce.app', 'miguelpiedrafita.com'],
 	},
-	experimental: {
-		optimizeCss: true,
-	},
 	future: {
-		excludeDefaultMomentLocales: true,
+		webpack5: true,
 	},
 	rewrites: () => [
 		{ source: '/blog/feed.xml', destination: '/_next/static/posts.xml' },
 		{ source: '/guides/feed.xml', destination: '/_next/static/guides.xml' },
+		{ source: '/analytics', destination: 'https://app.usefathom.com/share/atrfrddr/sitesauce.app' },
+		{ source: '/sites/1025/:path*', destination: 'https://app.usefathom.com/sites/1025/:path*' },
 	],
+	redirects: () => [{ source: '/status', destination: 'https://sitesauce.instatus.com/', permanent: true }],
 	webpack: (config, { dev, isServer }) => {
-		if (!isServer) config.node = { fs: 'empty' }
-
 		if (!dev && isServer) {
 			const originalEntry = config.entry
 
