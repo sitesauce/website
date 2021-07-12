@@ -54,7 +54,7 @@ const Pricing = ({ children }) => {
 					<h1 className="text-center font-spoof text-2xl leading-10 font-extrabold text-gray-900 relative">Schedule a call</h1>
 					<p className="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 text-center extra">Jump into a call with the creator of Sitesauce to get you started.</p>
 					<div className="inline-flex items-center justify-center mt-10 font-spoof text-black w-full pb-2">
-						<a className="font-spoof font-bold text-lg" href="mailto:miguel@sitesauce.app?subject=Get%20Started%20Call" target="_blank" rel="noreferrer">
+						<a className="font-spoof font-bold text-lg" href="https://savvycal.com/sitesauce/get-started" target="_blank" rel="noreferrer">
 							Schedule now
 						</a>
 						<svg className="ml-2 w-3 h-3" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
