@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import line from '@images/background/line.svg';
+import purpleBlob from '@images/background/purple-section2-blob.png';
+import scribbles from '@images/background/scribble-section2-right.svg';
+
+const { title, description, cta } = Astro.props;
+---
+
+<div id="features" class="relative bg-gray-50 px-5% py-24">
+	<Image
+		src={purpleBlob}
+		alt=""
+		class="image-41 mt-20 sm:mt-0"
+		loading="lazy"
+	/>
+	<Image src={scribbles} alt="" class="image-56" loading="lazy" />
+	<div class="container text-center">
+		<h1
+			class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4"
+		>
+			{title}
+		</h1>
+		<div
+			class="font-ttnorms text-black leading-7 text-xl text-center mb-4 mt-0"
+		>
+			{description}
+		</div>
+		<div
+			class="mt-20 grid gap-x-13 gap-y-24 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-auto-6 sm:grid-rows-auto-3 lg:grid-rows-auto-2"
+			style={{ gridAutoColumns: '1fr' }}
+		>
+			<slot />
+		</div>
+		<a
+			href="#pricing-focus"
+			class="text-center w-auto mx-auto mt-12 mb-5 py-5 px-8 sm:px-24 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1"
+		>
+			{cta}
+		</a>
+	</div>
+	<Image
+		src={line}
+		alt=""
+		class="image-33 _3 h-24 w-10 mb-6"
+		loading="lazy"
+	/>
+</div>

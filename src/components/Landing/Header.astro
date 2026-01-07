@@ -1,0 +1,102 @@
+---
+import { getStats } from '@/lib/stats';
+import DemoVideo from './DemoVideo.astro';
+
+const { title, description, cta } = Astro.props;
+
+const stats = await getStats();
+
+const formatNumber = (number: number, defaultValue: number) => {
+	return new Intl.NumberFormat(
+		typeof navigator != 'undefined' ? navigator.language : 'en-EN',
+	).format(number || defaultValue);
+};
+---
+
+<div class="relative">
+	<svg
+		aria-hidden
+		class="pointer-events-none absolute top-0 right-0 transform translate-x-1/2 -mr-16 z-30"
+		width="800"
+		height="502"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<circle
+			cx="400"
+			cy="102"
+			r="400"
+			fill="url(#heroglow_paint0_radial)"
+			fill-opacity=".6"></circle>
+		<circle
+			cx="209"
+			cy="289"
+			r="170"
+			fill="url(#heroglow_paint1_radial)"
+			fill-opacity=".4"></circle>
+		<defs>
+			<radialGradient
+				id="heroglow_paint0_radial"
+				cx="0"
+				cy="0"
+				r="1"
+				gradientUnits="userSpaceOnUse"
+				gradientTransform="rotate(90 149 251) scale(315.089)"
+			>
+				<stop stop-color="#3ABAB4"></stop>
+				<stop offset="1" stop-color="#3ABAB4" stop-opacity=".01"></stop>
+			</radialGradient>
+			<radialGradient
+				id="heroglow_paint1_radial"
+				cx="0"
+				cy="0"
+				r="1"
+				gradientUnits="userSpaceOnUse"
+				gradientTransform="rotate(90 -40 249) scale(133.913)"
+			>
+				<stop stop-color="#667EEA"></stop>
+				<stop offset="1" stop-color="#667EEA" stop-opacity=".01"></stop>
+			</radialGradient>
+		</defs>
+	</svg>
+	<div
+		class="relative overflow-visible h-auto bg-brand-50 pt-24 lg:pt-48 pb-24 px-5%"
+	>
+		<div
+			class="flex flex-col-reverse sm:flex-row items-center justify-between space-x-4"
+		>
+			<div class="ml-4">
+				<h1
+					class="max-w-3xl my-6 font-spoof text-4xl md:text-5xl xl:text-6xl text-black mx-auto tracking-tight font-bold"
+				>
+					{title}
+				</h1>
+				<p
+					class="font-ttnorms text-black text-xl leading-relaxed xl:text-2xl max-w-xl xl:max-w-2xl"
+				>
+					{description}
+				</p>
+				<a
+					href="https://app.sitesauce.app/register"
+					class="text-center w-auto mx-auto mt-8 xl:mt-10 py-4 px-8 sm:px-10 rounded-lg transition duration-200 ease-in-out shadow-brand border-2 border-brand-400 bg-brand-400 inline-block text-white font-medium font-brown text-lg hover:bg-brand-500 hover:border-brand-500 hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1"
+				>
+					{cta}
+				</a>
+				<p
+					class="mt-4 xl:mt-6 text-brand-900 font-medium z-20 relative max-w-md xl:max-w-2xl"
+				>
+					We have deployed{' '}
+					<a href="/open">
+						<a class="border-b-2 border-brand-700 pb-0.5">
+							over <span class="proportional-nums"
+								>{formatNumber(stats.deployments, 30000)}</span
+							> sites
+						</a>
+					</a>{' '}
+					across the internet, yours could be the next!
+				</p>
+			</div>
+			<DemoVideo className="z-30" />
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div>
+	<div class="relative min-h-feature">
+		<div class="relative w-20 mx-auto">
+			<slot />
+		</div>
+	</div>
+	<p
+		class="inline-block text-black text-lg font-spoof font-medium mb-4 text-center"
+	>
+		{title}
+	</p>
+	<div
+		class="block text-black font-ttnorms text-lg leading-relaxed mx-auto max-w-xxs my-0 mb-4 text-center"
+	>
+		{description}
+	</div>
+</div>

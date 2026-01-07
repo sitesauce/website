@@ -1,9 +1,9 @@
-import Page from '../../components/Page'
-export const meta = {
-    title: 'Dropping support for Netlify',
-    description: 'Starting today, you can no longer create Netlify sites on Sitesauce. Learn why we made this change and how to continue deploying your Sitesauce sites with no downtime.',
-    publishedAt: 'April 12th, 2020'
-}
+---
+publishedAt: 'April 12th, 2020'
+title: 'Dropping support for Netlify'
+layout: '@/components/ArticleLayout.astro'
+description: 'Starting today, you can no longer create Netlify sites on Sitesauce. Learn why we made this change and how to continue deploying your Sitesauce sites with no downtime.'
+---
 
 When building the first version of Sitesauce, [Netlify](https://netlify.com) was the only possible deployment target. After I managed to get that initial version working, I got contacted by the team at [Vercel](https://vercel.com/home), who offered their help to integrate with their platform. Together, we came up with a much faster integration (achieved by running the build script on their servers).
 
@@ -14,5 +14,3 @@ I've been thinking about dropping Netlify support and focusing exclusively on Ve
 Starting today, you won't be able to create new Netlify sites on Sitesauce or deploy your existing Netlify sites. You can, however, migrate your existing Netlify sites to Vercel in one click from your site's page. This will not remove your site from Netlify so your site stays up while you migrate.
 
 We understand this change might be annoying, but keep in mind you'll now be getting faster deployments, faster page loads thanks to [Vercel's CDN](https://vercel.com/smart-cdn) and a much better Sitesauce experience out of the box.
-
-export default props => <Page {...meta} {...props} />

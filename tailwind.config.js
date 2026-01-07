@@ -1,10 +1,10 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const hexToRgba = require('hex-to-rgba')
+import hexToRgba from 'hex-to-rgba'
+import typography from '@tailwindcss/typography'
+import aspectRatio from '@tailwindcss/aspect-ratio'
+import defaultTheme from 'tailwindcss/defaultTheme.js'
 
-module.exports = {
-    mode: 'jit',
-	purge: ['./src/**/*.{js,jsx}'],
-	darkMode: false,
+export default {
+	content: ['./src/**/*.{astro,tsx,js,css}'],
 	theme: {
 		extend: {
 			colors: {
@@ -138,8 +138,8 @@ module.exports = {
 		},
 	},
 	plugins: [
-		require('@tailwindcss/typography'),
-		require('@tailwindcss/aspect-ratio'),
+		typography,
+		aspectRatio,
 		({ addBase }) =>
 			addBase([
 				{

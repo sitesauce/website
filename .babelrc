@@ -1,16 +1,16 @@
 {
-    "presets": [
-      [
-        "next/babel",
-        {
-          "preset-env": {},
-          "transform-runtime": {},
-          "styled-jsx": {
-            "plugins": ["styled-jsx-plugin-postcss"]
-          },
-          "class-properties": {}
-        }
-      ]
-    ],
-    "plugins": []
-  }
+	"presets": [
+		[
+			"next/babel",
+			{
+				"preset-env": {},
+				"transform-runtime": {},
+				"styled-jsx": {
+					"plugins": ["styled-jsx-plugin-postcss"]
+				},
+				"class-properties": {}
+			}
+		]
+	],
+	"plugins": []
+}

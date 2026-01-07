@@ -1,10 +1,12 @@
-import Page from '../../components/Page'
-import Alert from '../../components/Alert'
-export const meta = {
-    title: 'Proxying endpoints to your backend',
-    description: 'Learn how to easily configure proxying to forwards calls from your static site to any backend',
-    publishedAt: 'April 28th, 2020'
-}
+---
+publishedAt: 'April 28th, 2020'
+layout: '@/components/ArticleLayout.astro'
+title: 'Proxying endpoints to your backend'
+description: 'Learn how to easily configure proxying to forwards calls from your static site to any backend'
+---
+
+import newRulesUI from '@images/assets/new-rules-ui.png'
+import Image from '@/components/Article/ArticleImage.astro'
 
 Static sites are great, but there are times you still need a backend. For example, you might have an API endpoint you want to keep hitting or a contact form you want to continue using. While we encourage you to use Jamstack-friendly alternatives instead of your backend (like [StaticKit](https://statickit.com) for forms or [Commento](https://commento.io) for comments), we understand this might not always be possible, and thus provide you with an alternative.
 
@@ -12,11 +14,10 @@ Enter proxying: proxying allows you to forward all calls from an endpoint of you
 
 To configure new rules for proxying or redirecting, click the `Create Rule` button in the Proxying & Redirects section of your Site Settings. You'll be asked to select the type of rule, the path affected by the rule, and the destination URL.
 
-![](/img/assets/new-rules-ui.png)
+<Image src={newRulesUI} alt="The new rules UI" />
 
 ### Advanced Usage
+
 Instead of creating a rule for each file in a folder you want to redirect to or for each API endpoint you want to forward, you can use regex.
 
 For example, imagine you want to forward all API requests to your backend. If your API lives at `https://example.com/api`, you can set your path to `/api/(.*)` to match any URL that starts with `/api`. Then, if we set our destination to `https://backend.example.com/api/$1`, everything that comes after `api/` in the original URL will be used to craft the destination URL, making `https://example.com/api/user` proxy to `https://backend.example.com/api/user`.
-
-export default props => <Page {...meta} {...props} />

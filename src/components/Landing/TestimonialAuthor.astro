@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+
+const { name, company, avatar, color, url } = Astro.props;
+---
+
+<div class="text-left inline-flex items-center">
+	<Image
+		src={avatar}
+		width={40}
+		height={40}
+		alt={name}
+		loading="lazy"
+		class="rounded-full"
+	/>
+	<p
+		class="ml-3 text-black text-lg mb-0 inline-block text-left font-spoof font-semibold leading-relaxed"
+	>
+		{name}, Founder of{' '}
+		<a
+			class="border-b-2 border-transparent hover:border-current transition"
+			href={url}
+			target="_blank"
+			rel="noreferrer"
+			style={{ color }}
+		>
+			{company}
+		</a>
+	</p>
+</div>

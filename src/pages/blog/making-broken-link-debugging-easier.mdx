@@ -1,10 +1,12 @@
-import Page from '../../components/Page'
-import Alert from '../../components/Alert'
-export const meta = {
-    title: 'Making broken link debugging easier',
-    description: 'Sitesauce will now email you when we find broken links while building your sites.',
-    publishedAt: 'November 7th, 2019'
-}
+---
+publishedAt: 'November 7th, 2019'
+layout: '@/components/ArticleLayout.astro'
+title: 'Making broken link debugging easier'
+description: 'Sitesauce will now email you when we find broken links while building your sites.'
+---
+
+import Image from '@/components/Article/ArticleImage.astro'
+import brokenContentEmail from '@images/assets/broken-content-email.png'
 
 If you work with websites, you've most certainly had to deal with broken links. Maybe you forgot to add a page to your newly-redesigned site or changed the format of your URLs, and now you have a link that goes nowhere hidden deep down in your pages.
 
@@ -12,8 +14,6 @@ Until now, Sitesauce silently skipped broken pages in order to continue building
 
 Starting today, we'll email you if we detect any broken links when building your static site. We also include a link to the page where we found your broken link, so you instantly know where to go. Of course, there's also a way to disable these emails if you want to.
 
-![Here's how the email looks like](/img/assets/broken-content-email.png)
+<Image src={brokenContentEmail} alt="Here's how the email looks like" />
 
 We can't build pages that aren't there, but we're now doing our best to give you all the tools you need to fix them.
-
-export default props => <Page {...meta} {...props} />

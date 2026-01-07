@@ -1,0 +1,67 @@
+---
+import Layout from '@/components/Layout.astro';
+import { getAllGuidePreviews } from '@/lib/getContent';
+
+const guides = getAllGuidePreviews();
+---
+
+<Layout
+	title="Sitesauce Guides - An expanding collection of Sitesauce knowledge, from basics to mastery."
+	description="An expanding collection of Sitesauce knowledge, from basics to mastery."
+	image="https://brand-assets.sitesauce.app/guides-card.png"
+>
+	<div
+		class="bg-brand-50 relative pt-24 pb-20 px-4 sm:px-6 lg:pb-0 lg:px-8 z-10"
+	>
+		<div class="relative max-w-7xl mx-auto">
+			<div class="text-center">
+				<span class="uppercase text-brand-900 font-brown"
+					>Mastering Sitesauce</span
+				>
+				<h2
+					class="mt-1 text-3xl leading-9 tracking-tight font-extrabold text-brand-900 sm:text-4xl sm:leading-10 font-spoof"
+				>
+					Sitesauce Guides
+				</h2>
+				<p
+					class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-brand-700 sm:mt-4 font-ttnorms"
+				>
+					An expanding collection of Sitesauce knowledge, from basics
+					to mastery.
+				</p>
+			</div>
+			<div
+				class="mt-12 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:grid-cols-3 lg:max-w-none"
+			>
+				{
+					guides.map((guide) => (
+						<a href={`/guides/${guide.slug}`}>
+							<div class="flex flex-col rounded-lg shadow-brand hover:shadow-brand-hover transform hover:translate-x-1 hover:translate-y-1 overflow-hidden transition duration-300 ease-in-out relative">
+								<div class="flex-shrink-0">
+									<img
+										class="h-48 w-full object-cover"
+										src={guide.image}
+										alt={guide.title}
+										loading="lazy"
+									/>
+								</div>
+								<div class="border-b border-l border-r border-brand-300 flex-1 bg-white px-6 py-3 flex flex-col justify-between rounded-b-lg">
+									<div class="flex-1">
+										<p class="font-ttnorms prose text-gray-500">
+											{guide.description}
+										</p>
+									</div>
+								</div>
+								<div class="absolute top-3 right-3">
+									<span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-brand-100 text-brand-800 font-ttnorms">
+										Tutorial
+									</span>
+								</div>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</Layout>

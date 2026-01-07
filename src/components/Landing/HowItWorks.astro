@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import blueBlob from '@images/background/blue-section1-blob.png';
+import orangeBlob from '@images/background/orange-section1-blob.png';
+import scribbleLeft from '@images/background/scribble-section1-left.svg';
+import scribbleRight from '@images/background/scribble-section1-right.svg';
+---
+
+<div id="how-it-works" class="relative px-5% py-24 bg-white">
+	<Image src={blueBlob} alt="" class="md:hidden lg:block image-35" />
+	<Image src={orangeBlob} alt="" class="image-36" />
+	<Image src={scribbleLeft} alt="" class="md:hidden lg:block image-55" />
+	<Image src={scribbleRight} alt="" class="image-54" />
+	<div class="container">
+		<h1
+			class="max-w-sm md:max-w-xl mt-0 font-spoof text-black text-4xl md:text-5xl leading-11 mx-auto tracking-tighter text-center font-bold mb-4"
+		>
+			How does it work?
+		</h1>
+		<div
+			class="mt-10 flex flex-col-reverse lg:flex-row items-center justify-between"
+		>
+			<slot name="testimonial" />
+			<div
+				class="z-20 flex flex-col md:flex-row lg:flex-col items-stretch mt-12 lg:mt-0 md:mb-16 lg:mb-0 sm:space-y-16"
+			>
+				<slot />
+			</div>
+		</div>
+	</div>
+</div>

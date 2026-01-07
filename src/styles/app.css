@@ -578,6 +578,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@screen md {
+	.footer-cta::before {
+		@apply block absolute w-full bg-brand-50;
+		content: '';
+		height: 200px;
+		transform: skewY(-4deg);
+		z-index: -1;
+		top: -90px;
+	}
+
+	.page-home .footer-cta::before {
+		background: white;
+	}
+}
+
 .text-shadow {
 	text-shadow: 2px 2px 14px rgba(0, 0, 0, 0.24);
 }
@@ -616,7 +631,6 @@
 	}
 }
 
-
 .content {
 	@apply font-ttnorms;
 
@@ -638,5 +652,5 @@
 
 	code {
 		@apply bg-brand-100 text-sm leading-6 inline-block rounded px-1 whitespace-nowrap text-brand-600 font-normal align-baseline;
-    }
+	}
 }

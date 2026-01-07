@@ -1,0 +1,9 @@
+---
+const { isFirst } = Astro.props;
+---
+
+<div
+	class={`md:grid md:grid-cols-12 md:gap-8 pb-6 ${!isFirst ? 'border-t border-gray-200 pt-6' : ''}`}
+>
+	<slot />
+</div>

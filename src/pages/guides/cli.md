@@ -1,0 +1,16 @@
+---
+publishedAt: 'April 28th, 2020'
+title: 'Deploying a site from localhost'
+layout: '@/components/ArticleLayout.astro'
+description: 'Learn how to deploy from your local machine, no servers needed!'
+---
+
+Sitesauce generally works by accessing your backend and using it to generate your static site. However, we also support deploying from your local machine, which allows you to greatly simplify your infrastructure and remove the costs of paying for a server.
+
+To get started, you'll have to download the [Sitesauce CLI](https://github.com/sitesauce/cli). You can do so by globally installing it using [yarn](https://yarnpkg.com) by running `yarn global add sitesauce-cli`, or with npm running `npm install --global sitesauce-cli`. You should also make sure you have your yarn/npm global directory in your PATH.
+
+Once you have the CLI installed, you'll have to log in to your Sitesauce account. Doing this is as simple as running `sitesauce login` and authorizing the CLI to access your account. If you are a member of multiple teams, please ensure you're on the right one by running `sitesauce team`, and switch if you aren't using `sitesauce switch`.
+
+To deploy a site, open the directory that hosts its code on your terminal and run `sitesauce init`. This will link your directory with an existing site or allow you to create a new one. Once this is done, you can now run `sitesauce deploy` to deploy your site to Vercel. You'll be asked the port your site is running on, and if it's running on port 80, you'll be asked if you want to use a virtual host, which is useful if you're using something like [Laravel Valet](https://laravel.com/docs/valet).
+
+Once you've done this initial configuration, you'll just need to run `sitesauce deploy` again from that directory to create new deployments. Enjoy your new static site!

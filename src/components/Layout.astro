@@ -1,0 +1,49 @@
+---
+import '@/styles/app.css';
+import Header from './Header';
+import Footer from './Footer.astro';
+import AffiliateBanner from './AffiliateBanner';
+
+const {
+	title = 'A static site for your dynamically-generated website',
+	description = 'Sitesauce converts your dynamic websites into static sites, so you can keep your existing workflow while enjoying all the benefits static sites provide.',
+	image = 'https://brand-assets.sitesauce.app/twitter-card.png',
+} = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content="Limbhad" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:type" content="website" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
+		<meta name="author" content="Miguel Piedrafita" />
+		<link
+			rel="icon"
+			href="https://brand-assets.sitesauce.app/icon.png"
+			type="image/png"
+		/>
+		<link
+			rel="shortcut icon"
+			href="https://brand-assets.sitesauce.app/icon.png"
+			type="image/png"
+		/>
+	</head>
+	<body class="antialiased min-h-screen flex flex-col">
+		<Header client:visible />
+		<div class="flex-1 bg-brand-50">
+			<slot />
+		</div>
+		<Footer />
+		<AffiliateBanner client:visible />
+	</body>
+</html>

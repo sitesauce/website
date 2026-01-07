@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+
+const { alt, title, src } = Astro.props;
+---
+
+<span
+	class="block relative border-2 border-brand-400 shadow-brand mx-auto mb-4 overflow-hidden rounded-lg"
+>
+	<Image class="w-full" alt={alt} src={src} loading="lazy" />
+	{
+		alt && (
+			<figcaption
+				class={`not-prose italic px-4 py-1 text-left w-auto absolute font-medium mt-0 font-ttnorms border border-brand-400 bg-brand-100 bottom-0 rounded ${title == 'left' ? 'left-4' : 'right-4'} shadow-brand mb-4`}
+			>
+				{alt}
+			</figcaption>
+		)
+	}
+</span>

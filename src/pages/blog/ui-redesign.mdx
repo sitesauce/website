@@ -1,23 +1,33 @@
-import Page from '../../components/Page'
-import Alert from '../../components/Alert'
-export const meta = {
-    title: '✨ Redesigning the UI',
-    description: "We gave the Sitesauce UI a fresh coat of paint. Here's how it turned out.",
-    publishedAt: 'November 10th, 2019'
-}
+---
+title: '✨ Redesigning the UI'
+publishedAt: 'November 10th, 2019'
+layout: '@/components/ArticleLayout.astro'
+description: "We gave the Sitesauce UI a fresh coat of paint. Here's how it turned out."
+---
 
-<Alert>The design shown in this article is no longer live. <a href="https://app.sitesauce.app/">See the new design live →</a></Alert>
+import Alert from '@/components/Alert.astro'
+
+<Alert>
+	The design shown in this article is no longer live.{' '}
+	<a href="https://app.sitesauce.app/">See the new design live →</a>
+</Alert>
 
 The Sitesauce UI was originally when building the MVP. While I focused on it for quite some time, it still was confusing, messed up some elements and wasn't responsive. So I decided to replace it.
 
 I wanted to rebuild the UI from scratch, that is, deleting my layout files and coding them again‪. Here's how it turned out:
 
 <div className="rounded-lg overflow-hidden">
-    <div className="relative p-0" style={{ paddingTop: '47.19%', margin:'-2px'}}>
-        <iframe className="absolute inset-0 w-full h-full" width="560" height="315" src="https://www.youtube-nocookie.com/embed/RJu_WL4Tfac" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-    </div>
+	<div className="relative p-0" style={{ paddingTop: '47.19%', margin: '-2px' }}>
+		<iframe
+			className="absolute inset-0 w-full h-full"
+			width="560"
+			height="315"
+			src="https://www.youtube-nocookie.com/embed/RJu_WL4Tfac"
+			frameBorder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		/>
+	</div>
 </div>
 
 I'm really happy with the result, and it also looks & works great on mobile, it's amazing what you can build in a weekend with [Tailwind CSS](https://tailwindcss.com/)!
-
-export default props => <Page {...meta} {...props} />
